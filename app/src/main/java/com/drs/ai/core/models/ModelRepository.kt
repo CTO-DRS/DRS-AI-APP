@@ -82,8 +82,10 @@ class ModelRepository(
                 }
                 else -> {
                     if (!GgufParser.isGguf(dest)) throw ImportException("Not a GGUF file (bad magic)")
-                    info = try { GgufParser.parse(dest) } catch (e: Exception) {
-                        throw ImportException("GGUF parse failed: ${e.message}")
+                    // v1.4.1 — deep validation (tensor table + data coverage) so truncated
+                    // downloads are rejected at import time with a precise message
+                    info = try { GgufParser.validateFull(dest) } catch (e: Exception) {
+                        throw ImportException("GGUF validation failed: ${e.message}")
                     }
                     if (kind == KIND_MMPROJ && !info.isMmproj) {
                         throw ImportException("This GGUF is not a vision projector (arch=${info.arch})")
@@ -155,7 +157,12 @@ class ModelRepository(
             if (kind != KIND_WHISPER && !GgufParser.isGguf(dest)) {
                 dest.delete(); throw ImportException("Downloaded file is not a GGUF model")
             }
-            val info = if (kind != KIND_WHISPER) try { GgufParser.parse(dest) } catch (e: Exception) { null } else null
+            // v1.4.1 — deep validation: a truncated download must be rejected, not imported
+            val info = if (kind != KIND_WHISPER) try {
+                GgufParser.validateFull(dest)
+            } catch (e: Exception) {
+                dest.delete(); throw ImportException("GGUF validation failed: ${e.message}")
+            } else null
             val id = dao.insertModel(
                 LocalModel(
                     name = fileName, path = dest.absolutePath, sizeBytes = dest.length(), kind = kind,

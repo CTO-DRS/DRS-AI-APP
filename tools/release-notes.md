@@ -108,3 +108,26 @@ First public release of a **truly installable, honest, fully offline** Android A
 
 ### Verify
 - Signature identical to v1.1.0–v1.3.0 (certificate SHA-256 `1fd35c8e…`) — direct in-place upgrade.
+
+---
+
+# 🛠 DRS AI APP v1.4.1 — تشخيص تحميل النماذج | Model-load diagnostics hotfix
+
+## 🇸🇦 بالعربية
+- **تحقق عميق من GGUF**: عند الاستيراد يُفحص جدول التنسورات كاملاً وتغطية البيانات مقابل حجم الملف —
+  التنزيل المقطوع يُرفض فوراً برسالة دقيقة («البيانات تحتاج ~X MB والملف ينقصه ~N MB»)
+- **فحص مسبق صادق قبل كل تحميل**: ملف مفقود/فارغ، ملف مقطوع، وتحذير ذاكرة منخفضة — قبل نداء المحرك الأصلي
+- **تراجع تلقائي GPU → CPU**: إن فشل نقل الطبقات إلى الرسوميات يُعاد التحميل على المعالج مرة واحدة مع إشعار صادق
+- **رسائل خطأ قابلة للتنفيذ**: مقطوع / ذاكرة غير كافية / ملف مفقود — لكل سبب رسالة عربية وإنجليزية توضح الحل
+
+## 🇬🇧 English
+- **Deep GGUF validation**: full tensor-table walk + data-coverage check at import; interrupted
+  downloads are rejected instantly with a precise "N MB short" message
+- **Honest preflight before every load**: missing/empty file, truncation, and low-RAM warning —
+  all surfaced before the native engine is invoked
+- **Automatic GPU → CPU fallback**: if Vulkan offload fails, one honest CPU retry with a notice
+- **Actionable error mapping**: truncated / out-of-memory / missing-file each get dedicated,
+  honest bilingual guidance
+
+### Verify
+- Signature identical (certificate SHA-256 `1fd35c8e…`) — direct in-place upgrade over v1.4.0.

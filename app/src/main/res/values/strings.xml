@@ -109,6 +109,9 @@
     <string name="chat_memory_saved">Saved to memory</string>
     <string name="chat_error">Generation error: %1$s</string>
     <string name="chat_model_load_failed">Model failed to load: %1$s</string>
+    <string name="chat_err_truncated">The model file is incomplete (interrupted download). Re-download it fully and import again — %1$s</string>
+    <string name="chat_err_oom">Not enough free memory for this model. Try a smaller model or lower the context size in Settings — %1$s</string>
+    <string name="chat_err_missing">The model file is missing from app storage. Re-import it from the Model Center.</string>
     <string name="chat_params">Generation parameters</string>
     <string name="chat_param_temperature">Temperature</string>
     <string name="chat_param_top_k">Top-K</string>
@@ -403,6 +406,8 @@
     <string name="notice_context_compressed">Older turns compressed into a local summary — nothing left your device</string>
     <string name="notice_loading_model">Loading model…</string>
     <string name="notice_memory_saved">Saved to long-term memory</string>
+    <string name="notice_gpu_fallback">GPU load failed — model loaded on CPU instead</string>
+    <string name="notice_ram_tight">Low free RAM for this model — close background apps if loading fails</string>
     <string name="chat_compressed_badge">compressed</string>
     <string name="sessions_search_hint">Search chats…</string>
     <string name="sessions_empty">No chats match your search</string>

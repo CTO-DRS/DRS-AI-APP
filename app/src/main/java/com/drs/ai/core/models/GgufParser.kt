@@ -39,14 +39,24 @@ object GgufParser {
         ins.read(m) == 4 && String(m, Charsets.US_ASCII) == WHISPER_MAGIC
     }
 
-    fun parse(file: File): GgufInfo {
+    fun parse(file: File): GgufInfo = parseImpl(file, deep = false)
+
+    /**
+     * v1.4.1 — deep validation: header + KV + the FULL tensor table + a data-coverage
+     * check against the actual file size. Catches incomplete downloads (the most common
+     * cause of native load failures) with a precise "missing N MB" message, so users
+     * get an honest, actionable error instead of a generic native one.
+     */
+    fun validateFull(file: File): GgufInfo = parseImpl(file, deep = true)
+
+    private fun parseImpl(file: File, deep: Boolean): GgufInfo {
         RandomAccessFile(file, "r").use { raf ->
             val magic = ByteArray(4)
             raf.readFully(magic)
             if (String(magic, Charsets.US_ASCII) != GGUF_MAGIC) throw GgufException("Not a GGUF file")
             val version = readU32(raf).toInt()
             if (version < 2 || version > 3) throw GgufException("Unsupported GGUF version: $version")
-            readU64(raf) // tensor count (not needed here)
+            val tensorCount = readU64(raf)
             val kvCount = readU64(raf)
             if (kvCount > 100_000) throw GgufException("Corrupt GGUF header (kv count $kvCount)")
 
@@ -56,6 +66,7 @@ object GgufParser {
             var blocks: Long? = null
             var emb: Long? = null
             var fileType: Long? = null
+            var alignment = 32L
 
             repeat(kvCount.toInt()) {
                 val key = readString(raf)
@@ -63,6 +74,7 @@ object GgufParser {
                 when {
                     key == "general.architecture" && type == 8 -> arch = readString(raf)
                     key == "general.name" && type == 8 -> name = readString(raf)
+                    key == "general.alignment" && type != 8 && type != 9 -> alignment = readScalarLong(type, raf) ?: 32L
                     key == "general.file_type" && type != 8 && type != 9 -> fileType = readScalarLong(type, raf)
                     key.endsWith(".context_length") && type != 8 && type != 9 -> ctx = readScalarLong(type, raf)
                     key.endsWith(".block_count") && type != 8 && type != 9 -> blocks = readScalarLong(type, raf)
@@ -73,9 +85,71 @@ object GgufParser {
                 }
             }
             val quant = quantLabel(fileType)
-            return GgufInfo(version, arch.ifBlank { "unknown" }, name, ctx, blocks, emb, quant, arch == "clip")
+            val info = GgufInfo(version, arch.ifBlank { "unknown" }, name, ctx, blocks, emb, quant, arch == "clip")
+            if (!deep) return info
+
+            // ---- v1.4.1 deep validation: walk the full tensor table ----------------
+            if (tensorCount > 100_000) throw GgufException("Corrupt GGUF header (tensor count $tensorCount)")
+            val align = if (alignment in 1..(1 shl 20)) alignment else 32L
+            val headerEnd = raf.filePointer
+            val dataStart = ((headerEnd + align - 1) / align) * align
+
+            var maxOffset = -1L
+            var maxType = -1
+            var maxNElems = 0L
+            repeat(tensorCount.toInt()) {
+                val tName = readString(raf)
+                val nDims = readU32(raf).toInt()
+                if (nDims < 1 || nDims > 4) throw GgufException("Corrupt GGUF tensor entry ($tName: n_dims=$nDims)")
+                var nElems = 1L
+                repeat(nDims) {
+                    val d = readU64(raf)
+                    if (d == 0L || d > (1L shl 34)) throw GgufException("Corrupt GGUF tensor entry ($tName: dim=$d)")
+                    nElems = if (nElems > (1L shl 50) / d.coerceAtLeast(1)) (1L shl 50) else nElems * d // overflow-safe cap
+                }
+                val tType = readU32(raf).toInt()
+                val off = readU64(raf)
+                if (off > maxOffset) { maxOffset = off; maxType = tType; maxNElems = nElems }
+            }
+
+            // The last tensor (highest offset) ends at dataStart + offset + size.
+            // A size-exact check for well-known types, a >=1-byte bound otherwise.
+            val lastSize = tensorBytes(maxType, maxNElems) ?: 1L
+            val fileLen = file.length()
+            val dataEnd = dataStart + maxOffset + lastSize
+            if (dataEnd > fileLen) {
+                val needMb = (dataEnd - dataStart) / (1024 * 1024)
+                val missingMb = (dataEnd - fileLen + 1024 * 1024 - 1) / (1024 * 1024)
+                throw GgufException(
+                    "GGUF file is truncated: tensor data needs ~${needMb} MB but the file ends ~${missingMb} MB short — re-download and re-import"
+                )
+            }
+            return info
         }
     }
+
+    /** Exact byte size for well-known ggml tensor types (null = cannot compute). */
+    private fun tensorBytes(type: Int, nElems: Long): Long? = when (type) {
+        0 -> nElems * 4                                     // F32
+        1 -> nElems * 2                                     // F16
+        2 -> blocks(nElems, 32) * 18                        // Q4_0
+        3 -> blocks(nElems, 32) * 20                        // Q4_1
+        6 -> blocks(nElems, 32) * 22                        // Q5_0
+        7 -> blocks(nElems, 32) * 24                        // Q5_1
+        8 -> blocks(nElems, 32) * 34                        // Q8_0
+        10, 11, 12, 13 -> blocks(nElems, 256) * 84          // Q2_K / Q3_K*
+        14, 15 -> blocks(nElems, 256) * 144                 // Q4_K*
+        16, 17 -> blocks(nElems, 256) * 176                 // Q5_K*
+        18 -> blocks(nElems, 256) * 210                     // Q6_K
+        29 -> nElems                                        // I8
+        30 -> nElems * 2                                    // I16
+        31 -> nElems * 4                                    // I32
+        32 -> nElems * 8                                    // I64
+        33 -> nElems * 8                                    // F64
+        else -> null                                        // IQ*/BF16/unknown → weak bound only
+    }
+
+    private fun blocks(nElems: Long, per: Long): Long = (nElems + per - 1) / per
 
     /** Human label for general.file_type per GGUF spec. */
     fun quantLabel(fileType: Long?): String = when (fileType?.toInt()) {

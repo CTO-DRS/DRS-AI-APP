@@ -204,8 +204,35 @@ class ChatViewModel(
                     val profile = HardwareProfiler.probe(appContext)
                     val threads = settings.threads.takeIf { it > 0 } ?: profile.recThreads
                     val ctx = settings.contextSize.coerceAtMost(active.ctxLen?.toInt() ?: settings.contextSize)
-                    val err = engine.load(active.path, active.name, ctx, threads, settings.batchSize,
+                    // v1.4.1 — honest preflight: the file must exist and be a COMPLETE
+                    // GGUF before we ask the native engine; otherwise give the real reason.
+                    val file = java.io.File(active.path)
+                    if (!file.exists() || file.length() < 1024) {
+                        _error.value = "load_failed: model file is missing or empty (${file.length()} bytes) — re-import the model"
+                        return
+                    }
+                    if (active.kind == ModelRepository.KIND_CHAT) {
+                        try {
+                            com.drs.ai.core.models.GgufParser.validateFull(file)
+                        } catch (e: com.drs.ai.core.models.GgufParser.GgufException) {
+                            _error.value = "load_failed: ${e.message}"
+                            return
+                        } catch (_: Exception) { /* parser limitation — let the engine decide */ }
+                        val am = appContext.getSystemService(android.content.Context.ACTIVITY_SERVICE) as? android.app.ActivityManager
+                        if (am != null) {
+                            val mi = android.app.ActivityManager.MemoryInfo()
+                            am.getMemoryInfo(mi)
+                            // mmap keeps this a soft heuristic — warn honestly, still try
+                            if (mi.availMem < file.length() * 14 / 10) _notice.value = "ram_tight"
+                        }
+                    }
+                    var err = engine.load(active.path, active.name, ctx, threads, settings.batchSize,
                                           gpuLayers = settings.gpuLayers)
+                    if (err != null && settings.gpuLayers > 0) {
+                        // v1.4.1 — GPU offload failed on this device: retry on CPU once, honestly
+                        _notice.value = "gpu_fallback"
+                        err = engine.load(active.path, active.name, ctx, threads, settings.batchSize, gpuLayers = 0)
+                    }
                     if (err != null) {
                         _error.value = "load_failed: $err"
                         return

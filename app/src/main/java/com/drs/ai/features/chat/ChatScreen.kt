@@ -138,6 +138,8 @@ fun ChatScreen(nav: NavController, vm: ChatViewModel = viewModel(factory = ChatV
             "context_compressed" -> R.string.notice_context_compressed
             "loading_model" -> R.string.notice_loading_model
             "memory_saved" -> R.string.notice_memory_saved
+            "gpu_fallback" -> R.string.notice_gpu_fallback
+            "ram_tight" -> R.string.notice_ram_tight
             else -> return@LaunchedEffect
         }
         Toast.makeText(context, context.getString(res), Toast.LENGTH_SHORT).show()
@@ -318,7 +320,19 @@ fun ChatScreen(nav: NavController, vm: ChatViewModel = viewModel(factory = ChatV
                 Text(
                     text = when {
                         e == "need_model" -> stringResource(R.string.chat_need_model_desc)
-                        e.startsWith("load_failed") -> stringResource(R.string.chat_model_load_failed, e.removePrefix("load_failed: "))
+                        e.startsWith("load_failed") -> {
+                            val d = e.removePrefix("load_failed: ")
+                            when {
+                                d.contains("truncated", ignoreCase = true) ->
+                                    stringResource(R.string.chat_err_truncated, d)
+                                d.contains("out of memory", ignoreCase = true) ||
+                                    d.contains("allocate", ignoreCase = true) ->
+                                    stringResource(R.string.chat_err_oom, d)
+                                d.contains("missing or empty", ignoreCase = true) ->
+                                    stringResource(R.string.chat_err_missing)
+                                else -> stringResource(R.string.chat_model_load_failed, d)
+                            }
+                        }
                         else -> stringResource(R.string.chat_error, e)
                     },
                     color = MaterialTheme.colorScheme.error,

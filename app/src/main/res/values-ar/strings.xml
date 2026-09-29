@@ -109,6 +109,9 @@
     <string name="chat_memory_saved">حُفظ في الذاكرة</string>
     <string name="chat_error">خطأ في التوليد: %1$s</string>
     <string name="chat_model_load_failed">فشل تحميل النموذج: %1$s</string>
+    <string name="chat_err_truncated">ملف النموذج غير مكتمل (تنزيل مقطوع). أعد تنزيله بالكامل ثم استورده من جديد — %1$s</string>
+    <string name="chat_err_oom">الذاكرة المتاحة غير كافية لهذا النموذج. جرّب نموذجاً أصغر أو قلّل حجم السياق من الإعدادات — %1$s</string>
+    <string name="chat_err_missing">ملف النموذج مفقود من تخزين التطبيق. أعد استيراده من مركز النماذج.</string>
     <string name="chat_params">معاملات التوليد</string>
     <string name="chat_param_temperature">الحرارة</string>
     <string name="chat_param_top_k">Top-K</string>
@@ -403,6 +406,8 @@
     <string name="notice_context_compressed">الدورات الأقدم ضُغطت في ملخص محلي — لم يخرج شيء من جهازك</string>
     <string name="notice_loading_model">جارٍ تحميل النموذج…</string>
     <string name="notice_memory_saved">حُفظ في الذاكرة طويلة المدى</string>
+    <string name="notice_gpu_fallback">فشل التحميل على معالج الرسوميات — حُمّل النموذج على المعالج المركزي بدلاً منها</string>
+    <string name="notice_ram_tight">الذاكرة المتاحة قليلة لهذا النموذج — أغلق التطبيقات الخلفية إن فشل التحميل</string>
     <string name="chat_compressed_badge">مضغوط</string>
     <string name="sessions_search_hint">ابحث في المحادثات…</string>
     <string name="sessions_empty">لا توجد محادثات مطابقة</string>

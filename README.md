@@ -29,7 +29,7 @@ honestly: **"Model Required"** — and guides you to import one.
 
 ## 📦 Install | التثبيت
 
-1. Download `DRS-AI-v1.4.0-arm64-release.apk` from [Releases](../../releases/tag/v1.4.0) (45 MB, signed, R8-minified, Vulkan GPU inside, **built on the 2026 toolchain**)
+1. Download `DRS-AI-v1.4.1-arm64-release.apk` from [Releases](../../releases/tag/v1.4.1) (45 MB, signed, R8-minified, Vulkan GPU inside, **built on the 2026 toolchain**)
 2. Install on Android 8.0+ (ARM64) — allow "unknown sources" if asked
 3. Download a ready model **from the release pages** — no external site needed | نزّل نموذجاً جاهزاً من صفحات الإصدارات:
 
@@ -47,6 +47,20 @@ honestly: **"Model Required"** — and guides you to import one.
 > ⚠️ **Honest design**: the APK ships **without** bundled models (models are 0.4–1.1 GB each). The app shows
 > clear "Model Required" states until you import one. This is a feature, not a bug.
 > التصميم الصادق: التطبيق يأتي بلا نماذج مدمجة، ويعرض حالة «مطلوب نموذج» بوضوح حتى تستورد واحداً.
+
+## 🛠 What's new in v1.4.1 | جديد الإصدار *(إصلاح تشخيص تحميل النماذج | Model-load diagnostics hotfix)*
+
+- **Deep GGUF validation** — the importer now walks the FULL tensor table and checks data coverage,
+  so an interrupted download is rejected **at import time** with a precise “file ends ~N MB short”
+  message instead of failing later with a generic engine error
+- **Honest preflight before every load** — missing/empty file, truncation, and a low-RAM warning are
+  surfaced in clear Arabic/English before the native engine is even asked
+- **Automatic GPU → CPU fallback** — if Vulkan offload fails on the device, the model retries on CPU
+  once and tells you (“GPU load failed — model loaded on CPU instead”)
+- **Actionable error mapping** — truncated / out-of-memory / missing-file errors now show dedicated,
+  honest guidance in both languages
+- تحقق عميق من ملفات GGUF (يكشف التنزيلات المقطوعة فوراً) + فحص مسبق صادق قبل كل تحميل + تراجع تلقائي
+  من GPU إلى CPU + رسائل خطأ عربية واضحة تخبرك بالسبب الحقيقي والحل
 
 ## ⚡ What's new in v1.4.0 | جديد الإصدار
 
