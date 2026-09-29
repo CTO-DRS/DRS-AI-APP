@@ -19,11 +19,34 @@ interface ChatDao {
     @Query("DELETE FROM chat_sessions WHERE id = :id")
     suspend fun deleteSession(id: Long)
 
-    @Query("SELECT * FROM chat_sessions ORDER BY updatedAt DESC")
+    @Query("SELECT * FROM chat_sessions ORDER BY pinned DESC, updatedAt DESC")
     fun observeSessions(): Flow<List<ChatSession>>
 
     @Query("SELECT * FROM chat_sessions WHERE id = :id")
     suspend fun getSession(id: Long): ChatSession?
+
+    // v1.4 — session search / pin / rename
+    @Query("SELECT * FROM chat_sessions WHERE title LIKE '%' || :q || '%' ORDER BY pinned DESC, updatedAt DESC")
+    fun searchSessions(q: String): Flow<List<ChatSession>>
+
+    @Query("UPDATE chat_sessions SET pinned = :pinned WHERE id = :id")
+    suspend fun setPinned(id: Long, pinned: Boolean)
+
+    @Query("UPDATE chat_sessions SET title = :title WHERE id = :id")
+    suspend fun renameSession(id: Long, title: String)
+
+    // v1.4 — usage statistics (honest, local-only)
+    @Query("SELECT COUNT(*) FROM chat_sessions")
+    suspend fun sessionCount(): Int
+
+    @Query("SELECT COUNT(*) FROM chat_messages")
+    suspend fun messageCountTotal(): Int
+
+    @Query("SELECT COALESCE(SUM(tokens), 0) FROM chat_messages WHERE role = 'assistant'")
+    suspend fun totalTokens(): Int
+
+    @Query("SELECT COALESCE(AVG(tokPerSec), 0) FROM chat_messages WHERE role = 'assistant' AND tokPerSec > 0")
+    suspend fun avgTokPerSec(): Float
 
     @Insert
     suspend fun insertMessage(m: ChatMessage): Long

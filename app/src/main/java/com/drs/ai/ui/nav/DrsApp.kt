@@ -3,7 +3,10 @@ package com.drs.ai.ui.nav
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Chat
 import androidx.compose.material.icons.filled.Dashboard
@@ -16,6 +19,7 @@ import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
+import androidx.compose.animation.core.tween
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -23,7 +27,10 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavGraph.Companion.findStartDestination
@@ -45,6 +52,7 @@ import com.drs.ai.features.settings.SettingsScreen
 import com.drs.ai.features.tools.ToolsScreen
 import com.drs.ai.features.vision.VisionScreen
 import com.drs.ai.features.voice.VoiceScreen
+import kotlinx.coroutines.launch
 import kotlinx.coroutines.flow.first
 
 object Routes {
@@ -89,6 +97,18 @@ fun DrsRoot() {
         return
     }
 
+    // v1.4 — first-run onboarding wizard (once, skippable, after lock check)
+    val scope = androidx.compose.runtime.rememberCoroutineScope()
+    if (lockResolved && s != null && !s.onboardingDone) {
+        com.drs.ai.features.onboarding.OnboardingScreen(
+            onFinish = {
+                unlocked = true
+                scope.launch { container.settings.setOnboardingDone(true) }
+            }
+        )
+        return
+    }
+
     val nav = rememberNavController()
     val backStack by nav.currentBackStackEntryAsState()
     val currentRoute = backStack?.destination?.route
@@ -106,7 +126,16 @@ fun DrsRoot() {
     Scaffold(
         containerColor = MaterialTheme.colorScheme.background,
         bottomBar = {
-            if (showBar) {
+            // v1.4: bottom bar slides in/out with the route — feels alive, saves space
+            androidx.compose.animation.AnimatedVisibility(
+                visible = showBar,
+                enter = androidx.compose.animation.slideInVertically(
+                    animationSpec = androidx.compose.animation.core.spring(
+                        dampingRatio = 0.86f, stiffness = 340f
+                    )
+                ) { it } + androidx.compose.animation.fadeIn(),
+                exit = androidx.compose.animation.slideOutVertically { it } + androidx.compose.animation.fadeOut()
+            ) {
                 NavigationBar(
                     containerColor = MaterialTheme.colorScheme.surfaceContainer,
                     tonalElevation = 0.dp
@@ -114,6 +143,18 @@ fun DrsRoot() {
                     for (tab in tabs) {
                         val selected = currentRoute == tab.route
                         val label = stringResource(tab.labelRes)
+                        // v1.4: animated pill behind the icon + spring scale — modern morph
+                        val pillColor by androidx.compose.animation.animateColorAsState(
+                            targetValue = if (selected) MaterialTheme.colorScheme.primaryContainer
+                                          else Color.Transparent,
+                            animationSpec = tween(240), label = "pill"
+                        )
+                        val iconScale by androidx.compose.animation.core.animateFloatAsState(
+                            targetValue = if (selected) 1.12f else 1f,
+                            animationSpec = androidx.compose.animation.core.spring(
+                                dampingRatio = 0.55f, stiffness = 420f
+                            ), label = "tabScale"
+                        )
                         NavigationBarItem(
                             selected = selected,
                             onClick = {
@@ -123,7 +164,28 @@ fun DrsRoot() {
                                     restoreState = true
                                 }
                             },
-                            icon = tab.icon,
+                            icon = {
+                                Box(
+                                    Modifier
+                                        .size(width = 44.dp, height = 30.dp)
+                                        .background(pillColor, RoundedCornerShape(50))
+                                ) {
+                                    Box(
+                                        Modifier.fillMaxSize(),
+                                        contentAlignment = Alignment.Center
+                                    ) {
+                                        Box(
+                                            Modifier
+                                                .fillMaxSize()
+                                                .graphicsLayer {
+                                                    scaleX = iconScale
+                                                    scaleY = iconScale
+                                                },
+                                            contentAlignment = Alignment.Center
+                                        ) { tab.icon() }
+                                    }
+                                }
+                            },
                             label = { Text(label, maxLines = 1) }
                         )
                     }
@@ -137,7 +199,34 @@ fun DrsRoot() {
                 .background(MaterialTheme.colorScheme.background)
                 .padding(padding)
         ) {
-            NavHost(navController = nav, startDestination = Routes.DASHBOARD) {
+            // v1.4: RTL-safe screen transitions — soft fade + micro scale,
+            // no directional slides (direction mirrors badly in Arabic).
+            NavHost(
+                navController = nav,
+                startDestination = Routes.DASHBOARD,
+                enterTransition = {
+                    androidx.compose.animation.fadeIn(
+                        androidx.compose.animation.core.tween(230)
+                    ) + androidx.compose.animation.scaleIn(
+                        initialScale = 0.965f,
+                        animationSpec = androidx.compose.animation.core.tween(230)
+                    )
+                },
+                exitTransition = {
+                    androidx.compose.animation.fadeOut(androidx.compose.animation.core.tween(170))
+                },
+                popEnterTransition = {
+                    androidx.compose.animation.fadeIn(androidx.compose.animation.core.tween(200))
+                },
+                popExitTransition = {
+                    androidx.compose.animation.fadeOut(
+                        androidx.compose.animation.core.tween(170)
+                    ) + androidx.compose.animation.scaleOut(
+                        targetScale = 0.975f,
+                        animationSpec = androidx.compose.animation.core.tween(170)
+                    )
+                }
+            ) {
                 composable(Routes.DASHBOARD) { DashboardScreen(nav) }
                 composable(Routes.CHAT) { ChatScreen(nav) }
                 composable(Routes.MODELS) { ModelsScreen(nav) }

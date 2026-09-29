@@ -396,4 +396,40 @@
     <string name="export_fmt_txt">Plain text</string>
     <string name="export_share_toast">Exported — choose where to save or share</string>
 
+
+    <!-- v1.4.0 -->
+    <string name="theme_amoled">AMOLED</string>
+    <string name="notice_context_trimmed">Context trimmed to fit the model window</string>
+    <string name="notice_context_compressed">Older turns compressed into a local summary — nothing left your device</string>
+    <string name="notice_loading_model">Loading model…</string>
+    <string name="notice_memory_saved">Saved to long-term memory</string>
+    <string name="chat_compressed_badge">compressed</string>
+    <string name="sessions_search_hint">Search chats…</string>
+    <string name="sessions_empty">No chats match your search</string>
+    <string name="sessions_pin">Pin / unpin</string>
+    <string name="sessions_rename">Rename</string>
+    <string name="sessions_longpress_hint">Long-press a chat to rename it</string>
+    <string name="templates_title">Prompt library</string>
+    <string name="templates_hint">Tap a template to insert it into the input box — all stored on this device</string>
+    <string name="templates_new">New</string>
+    <string name="templates_edit">Edit template</string>
+    <string name="templates_empty">No templates yet — create your first one</string>
+    <string name="templates_field_title">Title</string>
+    <string name="templates_field_content">Prompt content</string>
+    <string name="templates_field_category">Category (optional)</string>
+    <string name="dashboard_usage_stats">Usage stats</string>
+    <string name="stats_chats">Chats</string>
+    <string name="stats_messages">Messages</string>
+    <string name="stats_tokens">Tokens generated</string>
+    <string name="stats_avg_speed">Avg tok/s</string>
+    <string name="onboarding_skip">Skip</string>
+    <string name="onboarding_next">Next</string>
+    <string name="onboarding_start">Get started</string>
+    <string name="onboarding_1_title">A full AI that lives on your phone</string>
+    <string name="onboarding_1_body">DRS AI runs real language models locally — chat, vision, voice and documents work with airplane mode on.</string>
+    <string name="onboarding_2_title">Your words never leave the device</string>
+    <string name="onboarding_2_body">No cloud. No accounts. No analytics. Nothing you type or record is uploaded anywhere — ever.</string>
+    <string name="onboarding_3_title">Fast, private, and honestly engineered</string>
+    <string name="onboarding_3_body">GPU acceleration when available, smart context compression, and a prompt library. Every limitation is shown openly inside the app.</string>
+
 </resources>

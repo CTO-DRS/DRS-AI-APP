@@ -41,7 +41,8 @@ data class AppSettings(
     val replyLang: String = "", // empty = follow user language
     val ragEnabled: Boolean = true,
     val gen: GenParams = GenParams(),
-    val preset: String = "balanced" // precise | balanced | creative | custom
+    val preset: String = "balanced", // precise | balanced | creative | custom
+    val onboardingDone: Boolean = false // v1.4 — first-run wizard shown once
 )
 
 class SettingsRepository(private val context: Context) {
@@ -71,6 +72,7 @@ class SettingsRepository(private val context: Context) {
         val maxTokens = intPreferencesKey("gen_max_tokens")
         val seed = stringPreferencesKey("gen_seed")
         val preset = stringPreferencesKey("gen_preset")
+        val onboardingDone = booleanPreferencesKey("onboarding_done")
     }
 
     val settings: Flow<AppSettings> = context.dataStore.data.map { p ->
@@ -100,7 +102,8 @@ class SettingsRepository(private val context: Context) {
                 maxTokens = p[K.maxTokens] ?: 512,
                 seed = p[K.seed]?.toLongOrNull() ?: -1L
             ),
-            preset = p[K.preset] ?: "balanced"
+            preset = p[K.preset] ?: "balanced",
+            onboardingDone = p[K.onboardingDone] ?: false
         )
     }
 
@@ -130,6 +133,7 @@ class SettingsRepository(private val context: Context) {
     suspend fun setReplyLang(v: String) = set(K.replyLang, v)
     suspend fun setRagEnabled(v: Boolean) = set(K.ragEnabled, v)
     suspend fun setPreset(v: String) = set(K.preset, v)
+    suspend fun setOnboardingDone(v: Boolean) = set(K.onboardingDone, v)
     suspend fun setGenParams(g: GenParams) {
         context.dataStore.edit { p ->
             p[K.temperature] = g.temperature

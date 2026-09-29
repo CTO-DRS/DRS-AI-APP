@@ -61,8 +61,10 @@ import com.drs.ai.core.models.HardwareProfiler
 import com.drs.ai.ui.components.InfoRow
 import com.drs.ai.ui.components.PulsingDot
 import com.drs.ai.ui.components.SectionTitle
+import com.drs.ai.ui.components.CountUpText
 import com.drs.ai.ui.components.StatusBadge
 import com.drs.ai.ui.components.heroGradient
+import com.drs.ai.ui.components.novaBreath
 import com.drs.ai.ui.components.pressScale
 import com.drs.ai.ui.nav.Routes
 
@@ -101,7 +103,7 @@ fun DashboardScreen(nav: NavController) {
             Modifier
                 .fillMaxWidth()
                 .alpha(heroAlpha)
-                .background(brush = heroGradient(), shape = RoundedCornerShape(26.dp))
+                .novaBreath(shape = RoundedCornerShape(26.dp))
         ) {
             Column(Modifier.padding(20.dp)) {
                 Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
@@ -169,6 +171,9 @@ fun DashboardScreen(nav: NavController) {
             }
         }
 
+        // ── v1.4 usage stats ───────────────────────────────────────────────
+        UsageStatsCard()
+
         // ── Device profile ───────────────────────────────────────────────────
         Card(
             Modifier.fillMaxWidth(),
@@ -225,6 +230,100 @@ fun DashboardScreen(nav: NavController) {
         }
         Spacer(Modifier.height(48.dp))
     }
+}
+
+@Composable
+private fun UsageStatsCard() {
+    val dao = AppGraph.container.db.chatDao()
+    var sessions by remember { mutableStateOf(0) }
+    var messages by remember { mutableStateOf(0) }
+    var tokens by remember { mutableStateOf(0) }
+    var avgTps by remember { mutableStateOf(0f) }
+    LaunchedEffect(Unit) {
+        sessions = dao.sessionCount()
+        messages = dao.messageCountTotal()
+        tokens = dao.totalTokens()
+        avgTps = dao.avgTokPerSec()
+    }
+    Card(
+        Modifier.fillMaxWidth(),
+        colors = CardDefaults.cardColors(
+            containerColor = MaterialTheme.colorScheme.surfaceContainer
+        ),
+        elevation = CardDefaults.cardElevation(defaultElevation = 0.dp)
+    ) {
+        Column(Modifier.padding(16.dp)) {
+            SectionTitle(stringResource(R.string.dashboard_usage_stats))
+            Spacer(Modifier.height(12.dp))
+            Row(
+                Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceEvenly
+            ) {
+                Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                    CountUpText(
+                        sessions,
+                        valueStyle = MaterialTheme.typography.titleLarge.copy(
+                            color = MaterialTheme.colorScheme.primary,
+                            fontWeight = FontWeight.Bold
+                        )
+                    )
+                    Text(
+                        stringResource(R.string.stats_chats),
+                        style = MaterialTheme.typography.labelSmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
+                Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                    CountUpText(
+                        messages,
+                        valueStyle = MaterialTheme.typography.titleLarge.copy(
+                            color = MaterialTheme.colorScheme.primary,
+                            fontWeight = FontWeight.Bold
+                        )
+                    )
+                    Text(
+                        stringResource(R.string.stats_messages),
+                        style = MaterialTheme.typography.labelSmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
+                Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                    CountUpText(
+                        tokens,
+                        valueStyle = MaterialTheme.typography.titleLarge.copy(
+                            color = MaterialTheme.colorScheme.primary,
+                            fontWeight = FontWeight.Bold
+                        ),
+                        format = { formatCompact(it) }
+                    )
+                    Text(
+                        stringResource(R.string.stats_tokens),
+                        style = MaterialTheme.typography.labelSmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
+                Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                    Text(
+                        if (avgTps > 0f) "%.1f".format(avgTps) else "—",
+                        style = MaterialTheme.typography.titleLarge,
+                        color = MaterialTheme.colorScheme.primary,
+                        fontWeight = FontWeight.Bold
+                    )
+                    Text(
+                        stringResource(R.string.stats_avg_speed),
+                        style = MaterialTheme.typography.labelSmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
+            }
+        }
+    }
+}
+
+private fun formatCompact(n: Int): String = when {
+    n >= 1_000_000 -> "%.1fM".format(n / 1_000_000f)
+    n >= 1_000 -> "%.1fk".format(n / 1_000f)
+    else -> n.toString()
 }
 
 @Composable

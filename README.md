@@ -24,10 +24,12 @@ honestly: **"Model Required"** — and guides you to import one.
 | 🌐 **Bilingual** | Full Arabic/English UI with proper RTL |
 | 📤 **Export** | Conversations to Markdown / **HTML** / PDF / JSON / TXT + share |  
 | ⏰ **Smart Reminders** | Local alarms, repeats, quick templates, on-device AI suggestions |
+| ⭐ **Templates & Sessions** | Prompt-template library (categories, usage counts) + pin / rename / search sessions |
+| 🌑 **AMOLED theme** | True-black dark variant + spring-animated navigation |
 
 ## 📦 Install | التثبيت
 
-1. Download `DRS-AI-v1.3.0-arm64-release.apk` from [Releases](../../releases/tag/v1.3.0) (43 MB, signed, R8-minified, **Vulkan GPU** inside)
+1. Download `DRS-AI-v1.4.0-arm64-release.apk` from [Releases](../../releases/tag/v1.4.0) (45 MB, signed, R8-minified, Vulkan GPU inside, **built on the 2026 toolchain**)
 2. Install on Android 8.0+ (ARM64) — allow "unknown sources" if asked
 3. Download a ready model **from the release pages** — no external site needed | نزّل نموذجاً جاهزاً من صفحات الإصدارات:
 
@@ -45,6 +47,27 @@ honestly: **"Model Required"** — and guides you to import one.
 > ⚠️ **Honest design**: the APK ships **without** bundled models (models are 0.4–1.1 GB each). The app shows
 > clear "Model Required" states until you import one. This is a feature, not a bug.
 > التصميم الصادق: التطبيق يأتي بلا نماذج مدمجة، ويعرض حالة «مطلوب نموذج» بوضوح حتى تستورد واحداً.
+
+## ⚡ What's new in v1.4.0 | جديد الإصدار
+
+- **Every dependency on the latest stable line (2026-09, Maven-verified)** — AGP 8.5.2 → **9.4.1**
+  (built-in Kotlin 2.2.10), Gradle 8.9 → **9.6.0**, compileSdk 34 → **37**, targetSdk → 36,
+  Compose BOM 2024.09 → **2026.09.00** (Compose 1.12.1 / Material3 1.5.x), Room 2.6.1 → **2.8.5**,
+  Navigation 2.8 → **2.10.2**, core-ktx **1.19.1**, lifecycle **2.11.0**, DataStore **1.2.1**,
+  serialization **1.11.0**, coroutines **1.11.0**, jsoup **1.23.2** — same lean APK, zero new permissions.
+- **🧠 Smart context compression** — long chats no longer hard-trim: older turns are **summarized
+  locally by the model** into a rolling session summary (kept in the session row), and the chat shows
+  an **honest compression indicator** so you always know what the model sees.
+- **⭐ Sessions manager** — search / **pin** / rename / delete conversations from one dialog.
+- **📚 Prompt template library** — save, categorize and reuse prompts (bottom sheet, usage counts,
+  fully local).
+- **🌌 "Nova 2.0" interactions** — true-black **AMOLED** theme variant, spring-animated bottom bar
+  (sliding pill + scale), RTL-safe fade/scale screen transitions, typing indicator with thinking
+  dots, per-message **speed badge** (tokens/s), animated streaming text, `CountUpText`/`StatChip`
+  components and a local **usage-stats card** on the dashboard.
+- **🚀 First-run onboarding wizard** — skippable, runs once, guides model import.
+- **Non-destructive Room migration (2 → 3)** — all chats, models and memories preserved.
+- كل التبعيات لأحدث إصدار مستقر + ضغط سياق ذكي + مدير جلسات + مكتبة قوالب + ثيم AMOLED + حركات ربيعية.
 
 ## 🔥 What's new in v1.3.0 | جديد الإصدار
 

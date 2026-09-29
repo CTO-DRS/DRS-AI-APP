@@ -20,15 +20,14 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.material3.Typography
 
 // ─────────────────────────────────────────────────────────────────────────────
-// DRS AI — brand palette v1.2 ("Nova Indigo")
-// Deep indigo + violet core with electric cyan accents, on calm neutral surfaces.
+// DRS AI — brand palette v1.4 ("Nova 2.0")
+// Deep indigo core + electric violet + cyan energy, on calm neutral surfaces.
+// v1.4 adds a true-black AMOLED scheme and slightly richer containers.
 // ─────────────────────────────────────────────────────────────────────────────
-private val Indigo = Color(0xFF4F5BD5)
 private val IndigoDeep = Color(0xFF3A45A8)
 private val Violet = Color(0xFF7C4DFF)
-private val Cyan = Color(0xFF22D3EE)
 private val CyanDeep = Color(0xFF0E7490)
-private val Amber = Color(0xFFFFB74D)
+private val Aurora = Color(0xFF5B8DEF)
 
 private val LightColors = lightColorScheme(
     primary = IndigoDeep,
@@ -43,7 +42,7 @@ private val LightColors = lightColorScheme(
     onTertiary = Color.White,
     tertiaryContainer = Color(0xFFEBDCFF),
     onTertiaryContainer = Color(0xFF2A0A52),
-    background = Color(0xFFF7F8FD),
+    background = Color(0xFFF6F7FC),
     onBackground = Color(0xFF171A2B),
     surface = Color(0xFFFDFDFF),
     onSurface = Color(0xFF171A2B),
@@ -52,6 +51,8 @@ private val LightColors = lightColorScheme(
     surfaceContainer = Color(0xFFF0F1FA),
     surfaceContainerHigh = Color(0xFFEAECF7),
     surfaceContainerHighest = Color(0xFFE4E6F4),
+    surfaceContainerLow = Color(0xFFF7F8FE),
+    surfaceContainerLowest = Color(0xFFFFFFFF),
     outline = Color(0xFF787B93),
     outlineVariant = Color(0xFFC8CADB),
     error = Color(0xFFBA1A1A),
@@ -81,11 +82,29 @@ private val DarkColors = darkColorScheme(
     surfaceContainer = Color(0xFF1A1D31),
     surfaceContainerHigh = Color(0xFF232640),
     surfaceContainerHighest = Color(0xFF2C3050),
+    surfaceContainerLow = Color(0xFF111322),
+    surfaceContainerLowest = Color(0xFF0A0B18),
     outline = Color(0xFF9294AD),
     outlineVariant = Color(0xFF474A61),
     error = Color(0xFFFFB4AB),
     errorContainer = Color(0xFF93000A),
     onErrorContainer = Color(0xFFFFDAD6)
+)
+
+// v1.4 — true-black AMOLED variant of the dark scheme (saves power on OLED panels)
+private val AmoledColors = DarkColors.copy(
+    background = Color(0xFF000000),
+    onBackground = Color(0xFFE0E1F0),
+    surface = Color(0xFF06060C),
+    onSurface = Color(0xFFE0E1F0),
+    surfaceVariant = Color(0xFF3F4259),
+    onSurfaceVariant = Color(0xFFC2C4D6),
+    surfaceContainer = Color(0xFF0D0E18),
+    surfaceContainerHigh = Color(0xFF151625),
+    surfaceContainerHighest = Color(0xFF1D1E30),
+    surfaceContainerLow = Color(0xFF08090F),
+    surfaceContainerLowest = Color(0xFF000000),
+    outlineVariant = Color(0xFF3A3D52)
 )
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -114,25 +133,26 @@ private val AppShapes = Shapes(
     small = RoundedCornerShape(12.dp),
     medium = RoundedCornerShape(16.dp),
     large = RoundedCornerShape(22.dp),
-    extraLarge = RoundedCornerShape(28.dp)
+    extraLarge = RoundedCornerShape(30.dp)
 )
 
 @Composable
 fun DrsTheme(
-    themeMode: Int = 0, // 0 system, 1 light, 2 dark
+    themeMode: Int = 0, // 0 system, 1 light, 2 dark, 3 amoled (v1.4)
     dynamicColors: Boolean = true,
     languageTag: String = "system",
     content: @Composable () -> Unit
 ) {
     val dark = when (themeMode) {
         1 -> false
-        2 -> true
+        2, 3 -> true
         else -> isSystemInDarkTheme()
     }
     val context = LocalContext.current
     val colors = when {
-        dynamicColors && Build.VERSION.SDK_INT >= 31 ->
+        dynamicColors && Build.VERSION.SDK_INT >= 31 && themeMode != 3 ->
             if (dark) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
+        themeMode == 3 -> AmoledColors
         dark -> DarkColors
         else -> LightColors
     }

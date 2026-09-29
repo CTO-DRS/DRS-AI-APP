@@ -8,8 +8,8 @@ import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase
 
 @Database(
-    entities = [ChatSession::class, ChatMessage::class, LocalModel::class, MemoryEntry::class, Document::class, VectorRow::class, Reminder::class],
-    version = 2,
+    entities = [ChatSession::class, ChatMessage::class, LocalModel::class, MemoryEntry::class, Document::class, VectorRow::class, Reminder::class, PromptTemplate::class],
+    version = 3,
     exportSchema = false
 )
 abstract class DrsDatabase : RoomDatabase() {
@@ -17,6 +17,7 @@ abstract class DrsDatabase : RoomDatabase() {
     abstract fun memoryAndModelsDao(): com.drs.ai.data.dao.MemoryAndModelsDao
     abstract fun ragDao(): com.drs.ai.data.dao.RagDao
     abstract fun reminderDao(): com.drs.ai.data.dao.ReminderDao
+    abstract fun templateDao(): com.drs.ai.data.dao.TemplateDao
 
     companion object {
         @Volatile private var instance: DrsDatabase? = null
@@ -39,9 +40,30 @@ abstract class DrsDatabase : RoomDatabase() {
             }
         }
 
+        /**
+         * v1.4: session management (pin/summary columns) + prompt template library.
+         * Non-destructive — all chats, models and memories are preserved.
+         */
+        private val MIGRATION_2_3 = object : Migration(2, 3) {
+            override fun migrate(db: SupportSQLiteDatabase) {
+                db.execSQL("ALTER TABLE chat_sessions ADD COLUMN pinned INTEGER NOT NULL DEFAULT 0")
+                db.execSQL("ALTER TABLE chat_sessions ADD COLUMN summary TEXT")
+                db.execSQL("ALTER TABLE chat_sessions ADD COLUMN summaryUpTo INTEGER NOT NULL DEFAULT 0")
+                db.execSQL(
+                    "CREATE TABLE IF NOT EXISTS prompt_templates (" +
+                        "id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, " +
+                        "title TEXT NOT NULL, " +
+                        "content TEXT NOT NULL, " +
+                        "category TEXT NOT NULL DEFAULT '', " +
+                        "useCount INTEGER NOT NULL DEFAULT 0, " +
+                        "createdAt INTEGER NOT NULL)"
+                )
+            }
+        }
+
         fun get(context: Context): DrsDatabase = instance ?: synchronized(this) {
             instance ?: Room.databaseBuilder(context.applicationContext, DrsDatabase::class.java, "drs_ai.db")
-                .addMigrations(MIGRATION_1_2)
+                .addMigrations(MIGRATION_1_2, MIGRATION_2_3)
                 .build()
                 .also { instance = it }
         }

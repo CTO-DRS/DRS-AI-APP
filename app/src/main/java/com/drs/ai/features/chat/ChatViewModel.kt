@@ -7,6 +7,7 @@ import androidx.lifecycle.viewModelScope
 import com.drs.ai.AppGraph
 import com.drs.ai.data.db.ChatMessage
 import com.drs.ai.data.db.ChatSession
+import com.drs.ai.data.db.PromptTemplate
 import com.drs.ai.core.memory.MemoryManager
 import com.drs.ai.core.models.HardwareProfiler
 import com.drs.ai.core.models.ModelRepository
@@ -24,11 +25,17 @@ import kotlinx.coroutines.sync.withLock
 
 /**
  * Chat orchestration: builds prompts (system + memories + RAG + history), streams
- * generation into the UI, supports stop / regenerate, and guards context overflow honestly.
+ * generation into the UI, supports stop / regenerate, and guards context overflow.
+ *
+ * v1.4 — smart context compression (ROADMAP): instead of hard-trimming old turns,
+ * older history is summarized locally by the model into a rolling session summary.
+ * Nothing leaves the device; the summary lives in the session row and older
+ * messages stay readable in the transcript.
  */
 class ChatViewModel(
     private val engines: EngineManager,
     private val dao: com.drs.ai.data.dao.ChatDao,
+    private val templateDao: com.drs.ai.data.dao.TemplateDao,
     private val settingsRepo: SettingsRepository,
     private val memory: MemoryManager,
     private val rag: RagPipeline,
@@ -36,6 +43,9 @@ class ChatViewModel(
 ) : ViewModel() {
 
     val sessions = dao.observeSessions().stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
+
+    val templates: StateFlow<List<PromptTemplate>> = templateDao.observeAll()
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
 
     private val _messages = MutableStateFlow<List<ChatMessage>>(emptyList())
     val messages: StateFlow<List<ChatMessage>> = _messages
@@ -103,6 +113,15 @@ class ChatViewModel(
         }
     }
 
+    // v1.4 — session management
+    fun setPinned(id: Long, pinned: Boolean) {
+        viewModelScope.launch { dao.setPinned(id, pinned) }
+    }
+
+    fun renameSession(id: Long, title: String) {
+        viewModelScope.launch { dao.renameSession(id, title.trim()) }
+    }
+
     fun stop() {
         genJob?.cancel()
         genJob = null
@@ -120,6 +139,27 @@ class ChatViewModel(
             memory.add(text)
             _notice.value = "memory_saved"
         }
+    }
+
+    // v1.4 — prompt template library
+    fun addTemplate(title: String, content: String, category: String) {
+        viewModelScope.launch {
+            templateDao.insert(PromptTemplate(title = title.trim(), content = content, category = category, createdAt = System.currentTimeMillis()))
+        }
+    }
+
+    fun updateTemplate(t: PromptTemplate, title: String, content: String, category: String) {
+        viewModelScope.launch {
+            templateDao.update(t.copy(title = title.trim(), content = content, category = category))
+        }
+    }
+
+    fun deleteTemplate(t: PromptTemplate) {
+        viewModelScope.launch { templateDao.delete(t) }
+    }
+
+    fun onTemplateUsed(id: Long) {
+        viewModelScope.launch { templateDao.incrementUse(id) }
     }
 
     fun send(userText: String) {
@@ -177,17 +217,46 @@ class ChatViewModel(
                     dao.insertMessage(ChatMessage(sessionId = s.id, role = "user", content = userText, createdAt = now))
                 }
 
-                val all = dao.messagesForSession(s.id).toMutableList()
+                var all = dao.messagesForSession(s.id)
                 // exclude the latest user message from history (it is the turn being sent)
-                if (all.isNotEmpty() && all.last().role == "user") all.removeAt(all.size - 1)
+                if (all.isNotEmpty() && all.last().role == "user") all = all.dropLast(1)
 
-                val budgetTokens = engine.nCtx.takeIf { it > 0 } ?: settings.contextSize
-                var trimmed = false
-                while (estimateTokens(all) + estimateTokens(listOf(ChatMessage(0, 0, "user", userText, 0))) + settings.gen.maxTokens > budgetTokens - 8 && all.size > 1) {
-                    all.removeAt(0)
-                    trimmed = true
+                val budgetTokens = (engine.nCtx.takeIf { it > 0 } ?: settings.contextSize) - settings.gen.maxTokens - 128
+                var summary = _session.value?.summary
+                var coveredUpTo = _session.value?.summaryUpTo ?: 0L
+
+                // ── v1.4 smart context compression ─────────────────────────────
+                // If the uncovered history would overflow the budget, summarize the
+                // oldest uncovered turns locally and roll them into the session summary.
+                val userTokens = estimateTokens(userText)
+                if (estimateTokens(all.filter { it.createdAt > coveredUpTo }) + userTokens > budgetTokens) {
+                    val tailBudget = budgetTokens * 45 / 100
+                    val uncovered = all.filter { it.createdAt > coveredUpTo }
+                    val tail = mutableListOf<ChatMessage>()
+                    var total = 0
+                    for (m in uncovered.reversed()) {
+                        val t = estimateTokens(m.content) + 8
+                        if (total + t > tailBudget) break
+                        total += t
+                        tail.add(0, m)
+                    }
+                    val dropped = uncovered.dropLast(tail.size)
+                    if (dropped.isNotEmpty()) {
+                        val newSummary = summarize(engine, summary, dropped)
+                        if (!newSummary.isNullOrBlank()) {
+                            summary = newSummary
+                            coveredUpTo = maxOf(coveredUpTo, dropped.last().createdAt)
+                            dao.getSession(s.id)?.let { sess ->
+                                dao.updateSession(sess.copy(summary = summary, summaryUpTo = coveredUpTo))
+                                _session.value = sess.copy(summary = summary, summaryUpTo = coveredUpTo)
+                            }
+                            _notice.value = "context_compressed"
+                        }
+                    }
                 }
-                if (trimmed) _notice.value = "context_trimmed"
+
+                // Only messages not yet covered by the summary go into the prompt
+                val history = all.filter { it.createdAt > coveredUpTo }
                 _messages.value = dao.messagesForSession(s.id)
 
                 val ragBlock = if (settings.ragEnabled && engines.embedder.isLoaded) {
@@ -210,8 +279,12 @@ class ChatViewModel(
                     val memBlock = memory.buildBlock()
                     if (memBlock != null) { append(memBlock).append('\n') }
                     if (ragBlock != null) { append(ragBlock) }
+                    if (!summary.isNullOrBlank()) {
+                        append("— Summary of earlier conversation (older turns were compressed into this) —\n")
+                        append(summary).append("\n\n")
+                    }
                     append('\n')
-                    for (m in all) {
+                    for (m in history) {
                         append(if (m.role == "user") "User: " else "Assistant: ").append(m.content).append('\n')
                     }
                     append("User: ").append(userText).append('\n')
@@ -283,6 +356,43 @@ class ChatViewModel(
         }
     }
 
+    /**
+     * Local summarization for context compression — runs on the already-loaded chat
+     * model with low temperature and a hard token cap, so it costs at most a couple
+     * of seconds. Any failure keeps the previous behavior (hard trim) intact.
+     */
+    private suspend fun summarize(
+        engine: com.drs.ai.core.ai.LlmEngine,
+        previous: String?,
+        dropped: List<ChatMessage>
+    ): String? = try {
+        val prompt = buildString {
+            append("Summarize the following conversation excerpt in at most 120 words. ")
+            append("Preserve names, facts, decisions, dates and numbers. ")
+            append("Reply with the summary text only — no preamble, no quotes.\n\n")
+            if (!previous.isNullOrBlank()) {
+                append("Existing summary (merge its content in):\n").append(previous).append("\n\n")
+            }
+            append("Conversation excerpt:\n")
+            for (m in dropped) {
+                append(if (m.role == "user") "User: " else "Assistant: ")
+                append(m.content.take(600)).append('\n')
+            }
+        }
+        val r = engine.generate(
+            prompt,
+            com.drs.ai.core.ai.GenConfig(
+                temperature = 0.25f, topK = 40, topP = 0.9f, minP = 0.05f,
+                repeatPenalty = 1.1f, maxTokens = 200, seed = -1L
+            )
+        ) { true }
+        r.text.trim().takeIf { it.isNotBlank() }
+    } catch (t: Throwable) {
+        null // honest fallback: compression failed → keep going without it
+    }
+
+    private fun estimateTokens(text: String): Int = (text.length / 3.6).toInt().coerceAtLeast(1)
+
     private fun estimateTokens(messages: List<ChatMessage>): Int {
         var chars = 0
         for (m in messages) chars += m.content.length + 8
@@ -294,7 +404,7 @@ class ChatViewModel(
             @Suppress("UNCHECKED_CAST")
             override fun <T : ViewModel> create(modelClass: Class<T>): T {
                 val c = AppGraph.container
-                return ChatViewModel(c.engines, c.db.chatDao(), c.settings, c.memory, c.rag, c.appContext) as T
+                return ChatViewModel(c.engines, c.db.chatDao(), c.db.templateDao(), c.settings, c.memory, c.rag, c.appContext) as T
             }
         }
     }

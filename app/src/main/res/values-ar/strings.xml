@@ -396,4 +396,40 @@
     <string name="export_fmt_txt">نص عادي</string>
     <string name="export_share_toast">تم التصدير — اختر مكان الحفظ أو المشاركة</string>
 
+
+    <!-- v1.4.0 -->
+    <string name="theme_amoled">أسود عميق</string>
+    <string name="notice_context_trimmed">تم تقليم السياق ليتسع في نافذة النموذج</string>
+    <string name="notice_context_compressed">الدورات الأقدم ضُغطت في ملخص محلي — لم يخرج شيء من جهازك</string>
+    <string name="notice_loading_model">جارٍ تحميل النموذج…</string>
+    <string name="notice_memory_saved">حُفظ في الذاكرة طويلة المدى</string>
+    <string name="chat_compressed_badge">مضغوط</string>
+    <string name="sessions_search_hint">ابحث في المحادثات…</string>
+    <string name="sessions_empty">لا توجد محادثات مطابقة</string>
+    <string name="sessions_pin">تثبيت / إلغاء تثبيت</string>
+    <string name="sessions_rename">إعادة تسمية</string>
+    <string name="sessions_longpress_hint">اضغط مطولاً على محادثة لإعادة تسميتها</string>
+    <string name="templates_title">مكتبة الأوامر</string>
+    <string name="templates_hint">اضغط على قالب لإدراجه في مربع الكتابة — كل شيء محفوظ على جهازك فقط</string>
+    <string name="templates_new">جديد</string>
+    <string name="templates_edit">تحرير القالب</string>
+    <string name="templates_empty">لا قوالب بعد — أنشئ أول قالب لك</string>
+    <string name="templates_field_title">العنوان</string>
+    <string name="templates_field_content">نص الأمر</string>
+    <string name="templates_field_category">التصنيف (اختياري)</string>
+    <string name="dashboard_usage_stats">إحصاءات الاستخدام</string>
+    <string name="stats_chats">محادثات</string>
+    <string name="stats_messages">رسائل</string>
+    <string name="stats_tokens">توكنات مولّدة</string>
+    <string name="stats_avg_speed">متوسط tok/s</string>
+    <string name="onboarding_skip">تخطي</string>
+    <string name="onboarding_next">التالي</string>
+    <string name="onboarding_start">ابدأ الآن</string>
+    <string name="onboarding_1_title">ذكاء اصطناعي كامل يعيش في هاتفك</string>
+    <string name="onboarding_1_body">يشغّل DRS AI نماذج لغوية حقيقية محلياً — محادثة ورؤية وصوت ومستندات تعمل حتى مع تشغيل وضع الطيران.</string>
+    <string name="onboarding_2_title">كلماتك لا تترك الجهاز أبداً</string>
+    <string name="onboarding_2_body">بلا سحابة. بلا حسابات. بلا تحليلات. كل ما تكتبه أو تسجّله لا يُرفع إلى أي مكان — أبداً.</string>
+    <string name="onboarding_3_title">سريع وخاص ومهندس بصدق</string>
+    <string name="onboarding_3_body">تسريع رسومي عند توفره، ضغط سياق ذكي، ومكتبة أوامر. كل حدود القدرات معروضة بوضوح داخل التطبيق.</string>
+
 </resources>

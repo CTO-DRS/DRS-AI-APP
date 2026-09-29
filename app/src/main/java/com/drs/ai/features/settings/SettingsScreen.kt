@@ -99,7 +99,10 @@ fun SettingsScreen(nav: NavController) {
                 Column {
                     Text(stringResource(R.string.settings_theme_mode), style = MaterialTheme.typography.bodyLarge)
                     Row(horizontalArrangement = Arrangement.spacedBy(6.dp), modifier = Modifier.padding(top = 6.dp)) {
-                        for ((mode, label) in listOf(0 to R.string.theme_system, 1 to R.string.theme_light, 2 to R.string.theme_dark)) {
+                        for ((mode, label) in listOf(
+                            0 to R.string.theme_system, 1 to R.string.theme_light,
+                            2 to R.string.theme_dark, 3 to R.string.theme_amoled
+                        )) {
                             FilterChip(
                                 selected = s?.themeMode == mode,
                                 onClick = { scope.launch { container.settings.setThemeMode(mode) } },

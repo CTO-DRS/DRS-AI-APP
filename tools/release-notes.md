@@ -65,3 +65,46 @@ First public release of a **truly installable, honest, fully offline** Android A
 - 22/22 host smoke checks (incl. KV-cache REUSE verification) · 23/23 JVM unit tests
 
 > 🗺 خريطة التطوير الكاملة في [ROADMAP.md](../../blob/main/ROADMAP.md) — Vulkan، armeabi-v7a، صوت متدفق، وضع الوكيل، v2.0
+
+---
+
+# ⚡ DRS AI APP v1.4.0 — تبعيات 2026 + تفاعل أذكى | 2026 Toolchain + Smarter Interaction
+
+## 🇸🇦 بالعربية
+
+### الجديد في v1.4.0
+- **كل التبعيات لأحدث إصدار مستقر** (تحقق Maven 2026-09):
+  AGP 8.5.2 → **9.4.1** (Kotlin 2.2.10 مدمج) · Gradle 8.9 → **9.6.0** · compileSdk 34 → **37** ·
+  targetSdk → 36 · Compose BOM 2024.09 → **2026.09.00** (Compose 1.12.1 / Material3 1.5.x) ·
+  Room 2.6.1 → **2.8.5** · Navigation 2.8.2 → **2.10.2** · core-ktx **1.19.1** · lifecycle **2.11.0** ·
+  DataStore **1.2.1** · serialization **1.11.0** · coroutines **1.11.0** · jsoup **1.23.2** · KSP **2.3.12**
+  — بلا أذونات جديدة، وبنفس حجم APK التقريبي.
+- **ضغط السياق التدريجي**: المحادثات الطويلة لم تعد تُقص — تلخيص محلي للأدوار القديمة في ملخص جارٍ
+  يُحفظ داخل صف الجلسة، مع **مؤشر صادق** في الشاشة يوضح ما يراه النموذج فعلياً.
+- **مدير الجلسات**: بحث / تثبيت / إعادة تسمية / حذف من مربع واحد.
+- **مكتبة قوالب الأوامر**: حفظ وتصنيف وإعادة استخدام مع عدّاد استخدام — محلي 100%.
+- **تفاعل «Nova 2.0»**: ثيم AMOLED أسود حقيقي، شريط سفلي بحركة ربيعية (حبة منزلقة + تكبير)،
+  انتقالات شاشات آمنة RTL، مؤشر كتابة بنقاط تفكير، شارة سرعة لكل رسالة (رمز/ثانية)، نص بثّ متحرك،
+  بطاقة إحصاءات استخدام محلية في لوحة التحكم.
+- **معالج ترحيب لأول تشغيل** — مرة واحدة، قابل للتخطي، يوجّه لاستيراد النموذج.
+- **ترحيل Room 2 → 3 غير مدمّر** — كل المحادثات والنماذج والذكريات محفوظة.
+
+## 🇬🇧 English
+
+### New in v1.4.0
+- **Every dependency on the latest stable line (2026-09, Maven-verified)** — AGP 9.4.1 (built-in
+  Kotlin 2.2.10), Gradle 9.6.0, compileSdk 37 / targetSdk 36, Compose BOM 2026.09.00,
+  Room 2.8.5, Navigation 2.10.2, core-ktx 1.19.1, lifecycle 2.11.0, DataStore 1.2.1,
+  serialization/coroutines 1.11.0, jsoup 1.23.2, KSP 2.3.12 — zero new permissions.
+- **Smart context compression** — long chats are summarized locally into a rolling session summary
+  (replaces hard trimming) with an honest on-screen indicator of what the model sees.
+- **Sessions manager** — search / pin / rename / delete in one dialog.
+- **Prompt template library** — save, categorize, reuse, with usage counts; fully local.
+- **"Nova 2.0" interactions** — true-black AMOLED theme, spring-animated bottom bar (sliding pill +
+  scale), RTL-safe transitions, thinking-dots typing indicator, per-message speed badge (tok/s),
+  animated streaming text, local usage-stats card.
+- **First-run onboarding wizard** — skippable, guides model import.
+- **Non-destructive Room migration (2 → 3)** — all data preserved.
+
+### Verify
+- Signature identical to v1.1.0–v1.3.0 (certificate SHA-256 `1fd35c8e…`) — direct in-place upgrade.
