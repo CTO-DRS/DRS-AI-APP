@@ -1,0 +1,35 @@
+DRS AI — Third-party notices
+============================
+
+This project incorporates the following open-source components:
+
+1. llama.cpp (tag b6000) — https://github.com/ggml-org/llama.cpp
+   License: MIT. Copyright (c) 2013-2025 The ggml authors / Georgi Gerganov and contributors.
+   Used for on-device LLM inference (GGUF models), embeddings (ggml pooling),
+   and multimodal vision (mtmd module, tools/mtmd).
+
+2. whisper.cpp (v1.7.4) — https://github.com/ggml-org/whisper.cpp
+   License: MIT. Copyright (c) 2019-2024 Georgi Gerganov and contributors.
+   Used for on-device speech-to-text (GGML models). Statically linked with its own
+   ggml copy into libdrs_whisper_jni.so with hidden symbol visibility.
+
+3. GGML — https://github.com/ggml-org/llama.cpp/tree/master/ggml
+   License: MIT. Copyright (c) 2013-2025 The ggml authors.
+   Tensor library backing both engines above.
+
+4. AndroidX / Jetpack Compose / Room / DataStore / Navigation — https://developer.android.com/jetpack
+   License: Apache-2.0. Copyright The Android Open Source Project.
+
+5. kotlinx.serialization — https://github.com/Kotlin/kotlinx.serialization
+   License: Apache-2.0. Copyright JetBrains s.r.o.
+
+6. PDFBox-Android (com.tom-roush:pdfbox-android) — https://github.com/TomRoush/PdfBox-Android
+   License: Apache-2.0. Based on Apache PDFBox (Apache-2.0, Copyright The Apache Software Foundation).
+   Used for local PDF text extraction in the RAG pipeline.
+
+7. jsoup — https://jsoup.org
+   License: MIT. Copyright (c) 2009-2024 Jonathan Hedley.
+   Used for local HTML text extraction.
+
+All AI inference happens on the device. None of the above components perform any
+network communication inside DRS AI.
