@@ -8,6 +8,8 @@
     <string name="nav_models">Models</string>
     <string name="nav_tools">Tools</string>
     <string name="nav_settings">Settings</string>
+    <string name="nav_vision">Vision</string>
+    <string name="nav_voice">Voice</string>
 
     <!-- Status badges -->
     <string name="badge_local">LOCAL</string>

@@ -1,0 +1,1513 @@
+Marking string:vision_ask:2131296625 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:model_kind_embedder:2131296494 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:model_kind_chat:2131296493 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:model_kind_whisper:2131296497 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:model_kind_mmproj:2131296495 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:model_set_embedder:2131296503 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:model_set_active:2131296502 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:model_set_whisper:2131296505 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:model_set_mmproj:2131296504 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:view_tree_view_model_store_owner:2131034199 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:pooling_container_listener_holder_tag:2131034175 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:vision_title:2131296633 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:vision_desc:2131296626 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:vision_running:2131296632 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:vision_failed:2131296627 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:androidx_compose_ui_view_composition_context:2131034150 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:close:2131296328 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:cancel:2131296283 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:compat_title:2131296333 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:models_import:2131296509 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:androidx_startup:2131296266 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:voice_transcribing:2131296646 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:voice_transcribe:2131296644 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:units_to:2131296621 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:units_from:2131296614 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:uuid_count:2131296623 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:hash_input:2131296394 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:regex_test_text:2131296554 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:regex_pattern:2131296553 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:diag_engine:2131296353 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:diag_engine_loaded:2131296354 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:diag_engine_none:2131296355 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:yes:2131296648 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:diag_threads:2131296365 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:diag_device:2131296352 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:dashboard_abi:2131296336 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:dashboard_cores:2131296339 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:diag_ram_total:2131296361 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:diag_ram_avail:2131296360 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:diag_low_ram:2131296358 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:no:2131296520 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:diag_storage:2131296363 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:diag_thermal:2131296364 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:diag_gpu:2131296357 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:diag_profile:2131296359 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:vision_pick:2131296631 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:vision_need_mmproj:2131296629 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:vision_need_two_models:2131296630 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:profile_extreme:2131296545 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:profile_performance:2131296546 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:profile_balanced:2131296543 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:profile_entry:2131296544 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:badge_local:2131296268 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:badge_offline:2131296270 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:dashboard_title:2131296347 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:dashboard_subtitle:2131296346 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:dashboard_quick_actions:2131296344 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:action_start_chat:2131296265 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:action_add_model:2131296263 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:action_add_docs:2131296262 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:action_diagnose:2131296264 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:nav_vision:2131296517 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:nav_voice:2131296518 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:chat_context_usage:2131296285 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:default_popup_window_title:2131296350 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:compose_view_saveable_id_tag:2131034154 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:chat_param_temperature:2131296311 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:chat_param_top_k:2131296312 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:chat_param_top_p:2131296313 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:chat_param_min_p:2131296308 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:chat_param_repeat:2131296309 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:chat_param_max_tokens:2131296307 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:hide_graphics_layer_in_inspector_tag:2131034159 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:accessibility_custom_action_0:2131034113 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:accessibility_custom_action_1:2131034114 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:accessibility_custom_action_2:2131034125 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:accessibility_custom_action_3:2131034136 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:accessibility_custom_action_4:2131034139 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:accessibility_custom_action_5:2131034140 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:accessibility_custom_action_6:2131034141 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:accessibility_custom_action_7:2131034142 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:accessibility_custom_action_8:2131034143 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:accessibility_custom_action_9:2131034144 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:accessibility_custom_action_10:2131034115 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:accessibility_custom_action_11:2131034116 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:accessibility_custom_action_12:2131034117 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:accessibility_custom_action_13:2131034118 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:accessibility_custom_action_14:2131034119 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:accessibility_custom_action_15:2131034120 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:accessibility_custom_action_16:2131034121 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:accessibility_custom_action_17:2131034122 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:accessibility_custom_action_18:2131034123 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:accessibility_custom_action_19:2131034124 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:accessibility_custom_action_20:2131034126 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:accessibility_custom_action_21:2131034127 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:accessibility_custom_action_22:2131034128 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:accessibility_custom_action_23:2131034129 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:accessibility_custom_action_24:2131034130 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:accessibility_custom_action_25:2131034131 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:accessibility_custom_action_26:2131034132 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:accessibility_custom_action_27:2131034133 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:accessibility_custom_action_28:2131034134 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:accessibility_custom_action_29:2131034135 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:accessibility_custom_action_30:2131034137 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:accessibility_custom_action_31:2131034138 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:indeterminate:2131296396 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:state_off:2131296588 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:state_on:2131296589 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:selected:2131296556 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:not_selected:2131296522 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:template_percent:2131296593 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:in_progress:2131296395 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:state_empty:2131296587 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:tag_on_apply_window_listener:2131034183 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:tag_window_insets_animation_callback:2131034191 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:tab:2131296592 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:switch_role:2131296591 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:inspection_slot_table_set:2131034165 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:chat_empty:2131296291 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:tag_unhandled_key_event_manager:2131034189 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:tag_unhandled_key_listeners:2131034190 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:docs_title:2131296383 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:docs_supported:2131296382 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:docs_import_progress:2131296374 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:docs_import_failed:2131296373 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:docs_import_success:2131296375 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:docs_no_results:2131296377 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:docs_results:2131296378 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:docs_empty:2131296371 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:lock_title:2131296409 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:lock_enter_pin:2131296406 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:lock_wrong:2131296412 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:lock_use_biometrics_note:2131296411 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:models_title:2131296511 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:models_import_hint:2131296510 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:model_import_progress:2131296491 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:model_import_failed:2131296490 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:models_empty:2131296507 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:models_empty_hint:2131296508 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:preset_creative:2131296525 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:preset_precise:2131296527 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:preset_custom:2131296526 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:preset_balanced:2131296524 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:hide_in_inspector_tag:2131034161 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:m3c_dialog:2131296449 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:docs_import:2131296372 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:consume_window_insets_tag:2131034155 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:docs_search_hint:2131296381 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:tag_screen_reader_focusable:2131034186 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:tag_accessibility_heading:2131034181 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:tag_accessibility_pane_title:2131034182 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:tag_state_description:2131034187 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:tag_accessibility_actions:2131034179 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:accessibility_action_clickable_span:2131034112 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:tag_accessibility_clickable_spans:2131034180 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:view_tree_lifecycle_owner:2131034196 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:view_tree_on_back_pressed_dispatcher_owner:2131034197 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:settings_about:2131296557 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:settings_diagnostics:2131296571 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:privacy_title:2131296541 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:settings_clear_docs:2131296566 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:settings_clear_memory:2131296567 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:settings_clear_chats:2131296565 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:settings_app_lock_set:2131296561 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:settings_app_lock_remove:2131296560 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:lock_unlock:2131296410 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:diag_export:2131296356 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:diag_refresh:2131296362 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:compat_fail:2131296331 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:compat_warn:2131296334 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:compat_pass:2131296332 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:lock_confirm_pin:2131296405 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:lock_set_pin:2131296408 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking style:DialogWindowTheme:2131361792 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:save:2131296555 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:delete:2131296351 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:chat_regenerate:2131296317 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:chat_save_memory:2131296319 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:chat_copy:2131296287 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:wrapped_composition_tag:2131034200 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:view_tree_saved_state_registry_owner:2131034198 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:nav_dashboard:2131296513 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:nav_chat:2131296512 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:nav_models:2131296514 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:nav_tools:2131296516 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:nav_settings:2131296515 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:lock_mismatch:2131296407 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:settings_title:2131296586 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:settings_appearance:2131296562 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:theme_system:2131296596 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:theme_light:2131296595 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:theme_dark:2131296594 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:settings_dynamic_colors:2131296572 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:lang_system:2131296403 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:lang_en:2131296402 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:lang_ar:2131296401 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:settings_engine:2131296573 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:settings_threads:2131296585 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:settings_context:2131296569 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:settings_batch:2131296564 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:settings_flash_attention:2131296575 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:settings_gpu_layers_note:2131296577 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:settings_memory_mgmt:2131296580 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:settings_max_ram_pct:2131296579 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:settings_auto_unload:2131296563 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:settings_security:2131296583 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:settings_app_lock_on:2131296559 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:settings_data:2131296570 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:settings_privacy:2131296581 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:voice_title:2131296643 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:voice_stop_recording:2131296642 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:voice_mic_permission:2131296636 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:voice_record_failed:2131296639 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:voice_duration:2131296634 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:json_minify:2131296398 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:json_pretty:2131296399 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:calc_result:2131296275 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:tool_copied:2131296602 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:uuid_generate:2131296624 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:hash_compute:2131296393 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:base64_decode:2131296271 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:base64_encode:2131296272 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:tool_regex:2131296605 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:voice_result:2131296640 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:voice_tts_unavailable:2131296647 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:privacy_network_allowed:2131296538 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:privacy_network_blocked:2131296539 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:privacy_toggle_network:2131296542 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:docs_chunks:2131296369 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:base64_invalid:2131296273 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:calc_error:2131296274 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:json_invalid:2131296397 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:privacy_data_map:2131296535 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:privacy_map_chats:2131296536 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:privacy_map_files:2131296537 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:privacy_contracts:2131296533 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:privacy_contract_chat:2131296529 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:privacy_contract_stt:2131296531 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:privacy_contract_tts:2131296532 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:privacy_contract_download:2131296530 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:privacy_crash_reports:2131296534 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:regex_invalid:2131296551 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:tool_calculator:2131296601 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:tool_units:2131296606 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:tool_json:2131296604 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:tool_base64:2131296600 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:tool_hash:2131296603 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:tool_uuid:2131296607 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:tools_title:2131296608 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:units_length:2131296615 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:units_mass:2131296616 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:units_temperature:2131296619 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:units_area:2131296611 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:units_volume:2131296622 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:units_speed:2131296618 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:units_data:2131296612 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:units_time:2131296620 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:units_pressure:2131296617 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:units_energy:2131296613 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:default_error_message:2131296349 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:model_kind_unknown:2131296496 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:model_arch:2131296483 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:model_quant:2131296501 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:model_size:2131296506 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:model_active_embedder:2131296480 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:model_active:2131296479 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:model_active_whisper:2131296482 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:model_active_mmproj:2131296481 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:voice_lang:2131296635 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:chat_rag_enabled:2131296316 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:chat_language_directive:2131296300 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:chat_system_prompt:2131296324 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:chat_param_seed:2131296310 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:chat_params:2131296314 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:chat_hint:2131296299 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:chat_sessions:2131296321 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:about_version:2131296261 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:about_tagline:2131296258 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:about_body:2131296256 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:about_third_party:2131296259 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:about_license:2131296257 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:rag_sources:2131296547 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:chat_tokens_per_sec:2131296327 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:chat_need_model_desc:2131296305 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:chat_model_load_failed:2131296303 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:chat_error:2131296292 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:is_pooling_container_tag:2131034166 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking id:report_drawn:2131034176 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:regex_matches:2131296552 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:docs_score:2131296379 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:dashboard_device_profile:2131296340 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:dashboard_memory:2131296341 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:cores_fmt:2131296335 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:dashboard_android:2131296338 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:dashboard_vulkan:2131296348 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:none:2131296521 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:dashboard_storage_free:2131296345 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:dashboard_model_status:2131296342 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:dashboard_no_model_installed:2131296343 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:dashboard_active_model:2131296337 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:engine_state_idle:2131296387 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:engine_state_loading:2131296388 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:engine_state_generating:2131296386 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:engine_state_error:2131296385 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:privacy_offline_attestation:2131296540 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:privacy_attestation_ok:2131296528 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:diag_title:2131296366 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:voice_speak:2131296641 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:voice_record:2131296638 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+Marking string:voice_need_model:2131296637 reachable: referenced from /home/z/my-project/DRS-AI-APP-src/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+@attr/action : reachable=false
+@attr/alpha : reachable=false
+@attr/argType : reachable=false
+@attr/data : reachable=false
+@attr/dataPattern : reachable=false
+@attr/destination : reachable=false
+@attr/enterAnim : reachable=false
+@attr/exitAnim : reachable=false
+@attr/font : reachable=false
+@attr/fontProviderAuthority : reachable=false
+@attr/fontProviderCerts : reachable=false
+@attr/fontProviderFetchStrategy : reachable=false
+@attr/fontProviderFetchTimeout : reachable=false
+@attr/fontProviderPackage : reachable=false
+@attr/fontProviderQuery : reachable=false
+@attr/fontProviderSystemFontFamily : reachable=false
+@attr/fontStyle : reachable=false
+@attr/fontVariationSettings : reachable=false
+@attr/fontWeight : reachable=false
+@attr/graph : reachable=false
+@attr/lStar : reachable=false
+@attr/launchSingleTop : reachable=false
+@attr/mimeType : reachable=false
+@attr/navGraph : reachable=false
+@attr/nestedScrollViewStyle : reachable=false
+@attr/nullable : reachable=false
+@attr/popEnterAnim : reachable=false
+@attr/popExitAnim : reachable=false
+@attr/popUpTo : reachable=false
+@attr/popUpToInclusive : reachable=false
+@attr/popUpToSaveState : reachable=false
+@attr/queryPatterns : reachable=false
+@attr/restoreState : reachable=false
+@attr/route : reachable=false
+@attr/shortcutMatchRequired : reachable=false
+@attr/startDestination : reachable=false
+@attr/targetPackage : reachable=false
+@attr/ttcIndex : reachable=false
+@attr/uri : reachable=false
+@color/androidx_core_ripple_material_light : reachable=false
+@color/androidx_core_secondary_text_default_material_light : reachable=false
+@color/call_notification_answer_color : reachable=false
+@color/call_notification_decline_color : reachable=false
+@color/ic_launcher_background : reachable=false
+@color/notification_action_color_filter : reachable=false
+    @color/androidx_core_secondary_text_default_material_light
+@color/notification_icon_bg_color : reachable=false
+@color/vector_tint_color : reachable=false
+@color/vector_tint_theme_color : reachable=false
+@dimen/compat_button_inset_horizontal_material : reachable=false
+@dimen/compat_button_inset_vertical_material : reachable=false
+@dimen/compat_button_padding_horizontal_material : reachable=false
+@dimen/compat_button_padding_vertical_material : reachable=false
+@dimen/compat_control_corner_material : reachable=false
+@dimen/compat_notification_large_icon_max_height : reachable=false
+@dimen/compat_notification_large_icon_max_width : reachable=false
+@dimen/notification_action_icon_size : reachable=false
+@dimen/notification_action_text_size : reachable=false
+@dimen/notification_big_circle_margin : reachable=false
+@dimen/notification_content_margin_start : reachable=false
+@dimen/notification_large_icon_height : reachable=false
+@dimen/notification_large_icon_width : reachable=false
+@dimen/notification_main_column_padding_top : reachable=false
+@dimen/notification_media_narrow_margin : reachable=false
+@dimen/notification_right_icon_size : reachable=false
+@dimen/notification_right_side_padding_top : reachable=false
+@dimen/notification_small_icon_background_padding : reachable=false
+@dimen/notification_small_icon_size_as_large : reachable=false
+@dimen/notification_subtext_size : reachable=false
+@dimen/notification_top_pad : reachable=false
+@dimen/notification_top_pad_large_text : reachable=false
+@drawable/ic_call_answer : reachable=false
+@drawable/ic_call_answer_low : reachable=false
+@drawable/ic_call_answer_video : reachable=false
+@drawable/ic_call_answer_video_low : reachable=false
+@drawable/ic_call_decline : reachable=false
+@drawable/ic_call_decline_low : reachable=false
+@drawable/notification_action_background : reachable=false
+    @color/androidx_core_ripple_material_light
+    @dimen/compat_button_inset_horizontal_material
+    @dimen/compat_button_inset_vertical_material
+    @dimen/compat_control_corner_material
+    @dimen/compat_button_padding_vertical_material
+    @dimen/compat_button_padding_horizontal_material
+@drawable/notification_bg : reachable=false
+    @drawable/notification_bg_normal_pressed
+    @drawable/notification_bg_normal
+@drawable/notification_bg_low : reachable=false
+    @drawable/notification_bg_low_pressed
+    @drawable/notification_bg_low_normal
+@drawable/notification_bg_low_normal : reachable=false
+@drawable/notification_bg_low_pressed : reachable=false
+@drawable/notification_bg_normal : reachable=false
+@drawable/notification_bg_normal_pressed : reachable=false
+@drawable/notification_icon_background : reachable=false
+    @color/notification_icon_bg_color
+@drawable/notification_oversize_large_icon_bg : reachable=false
+@drawable/notification_template_icon_bg : reachable=false
+@drawable/notification_template_icon_low_bg : reachable=false
+@drawable/notification_tile_bg : reachable=false
+    @drawable/notify_panel_notification_icon_bg
+@drawable/notify_panel_notification_icon_bg : reachable=false
+@id/accessibility_action_clickable_span : reachable=true
+@id/accessibility_custom_action_0 : reachable=true
+@id/accessibility_custom_action_1 : reachable=true
+@id/accessibility_custom_action_10 : reachable=true
+@id/accessibility_custom_action_11 : reachable=true
+@id/accessibility_custom_action_12 : reachable=true
+@id/accessibility_custom_action_13 : reachable=true
+@id/accessibility_custom_action_14 : reachable=true
+@id/accessibility_custom_action_15 : reachable=true
+@id/accessibility_custom_action_16 : reachable=true
+@id/accessibility_custom_action_17 : reachable=true
+@id/accessibility_custom_action_18 : reachable=true
+@id/accessibility_custom_action_19 : reachable=true
+@id/accessibility_custom_action_2 : reachable=true
+@id/accessibility_custom_action_20 : reachable=true
+@id/accessibility_custom_action_21 : reachable=true
+@id/accessibility_custom_action_22 : reachable=true
+@id/accessibility_custom_action_23 : reachable=true
+@id/accessibility_custom_action_24 : reachable=true
+@id/accessibility_custom_action_25 : reachable=true
+@id/accessibility_custom_action_26 : reachable=true
+@id/accessibility_custom_action_27 : reachable=true
+@id/accessibility_custom_action_28 : reachable=true
+@id/accessibility_custom_action_29 : reachable=true
+@id/accessibility_custom_action_3 : reachable=true
+@id/accessibility_custom_action_30 : reachable=true
+@id/accessibility_custom_action_31 : reachable=true
+@id/accessibility_custom_action_4 : reachable=true
+@id/accessibility_custom_action_5 : reachable=true
+@id/accessibility_custom_action_6 : reachable=true
+@id/accessibility_custom_action_7 : reachable=true
+@id/accessibility_custom_action_8 : reachable=true
+@id/accessibility_custom_action_9 : reachable=true
+@id/action_container : reachable=false
+@id/action_divider : reachable=false
+@id/action_image : reachable=false
+@id/action_text : reachable=false
+@id/actions : reachable=false
+@id/androidx_compose_ui_view_composition_context : reachable=true
+@id/async : reachable=false
+@id/blocking : reachable=false
+@id/chronometer : reachable=false
+@id/compose_view_saveable_id_tag : reachable=true
+@id/consume_window_insets_tag : reachable=true
+@id/dialog_button : reachable=false
+@id/edit_text_id : reachable=false
+@id/forever : reachable=false
+@id/hide_graphics_layer_in_inspector_tag : reachable=true
+@id/hide_ime_id : reachable=false
+@id/hide_in_inspector_tag : reachable=true
+@id/icon : reachable=false
+@id/icon_group : reachable=false
+@id/info : reachable=false
+@id/inspection_slot_table_set : reachable=true
+@id/is_pooling_container_tag : reachable=true
+@id/italic : reachable=false
+@id/line1 : reachable=false
+@id/line3 : reachable=false
+@id/nav_controller_view_tag : reachable=false
+@id/normal : reachable=false
+@id/notification_background : reachable=false
+@id/notification_main_column : reachable=false
+@id/notification_main_column_container : reachable=false
+@id/pooling_container_listener_holder_tag : reachable=true
+@id/report_drawn : reachable=true
+@id/right_icon : reachable=false
+@id/right_side : reachable=false
+@id/tag_accessibility_actions : reachable=true
+@id/tag_accessibility_clickable_spans : reachable=true
+@id/tag_accessibility_heading : reachable=true
+@id/tag_accessibility_pane_title : reachable=true
+@id/tag_on_apply_window_listener : reachable=true
+@id/tag_on_receive_content_listener : reachable=false
+@id/tag_on_receive_content_mime_types : reachable=false
+@id/tag_screen_reader_focusable : reachable=true
+@id/tag_state_description : reachable=true
+@id/tag_transition_group : reachable=false
+@id/tag_unhandled_key_event_manager : reachable=true
+@id/tag_unhandled_key_listeners : reachable=true
+@id/tag_window_insets_animation_callback : reachable=true
+@id/text : reachable=false
+@id/text2 : reachable=false
+@id/time : reachable=false
+@id/title : reachable=false
+@id/view_tree_lifecycle_owner : reachable=true
+@id/view_tree_on_back_pressed_dispatcher_owner : reachable=true
+@id/view_tree_saved_state_registry_owner : reachable=true
+@id/view_tree_view_model_store_owner : reachable=true
+@id/wrapped_composition_tag : reachable=true
+@integer/m3c_window_layout_in_display_cutout_mode : reachable=false
+@integer/status_bar_notification_info_maxnum : reachable=false
+@layout/custom_dialog : reachable=false
+@layout/ime_base_split_test_activity : reachable=false
+@layout/ime_secondary_split_test_activity : reachable=false
+@layout/notification_action : reachable=false
+    @style/Widget_Compat_NotificationActionContainer
+    @dimen/notification_action_icon_size
+    @style/Widget_Compat_NotificationActionText
+@layout/notification_action_tombstone : reachable=false
+    @style/Widget_Compat_NotificationActionContainer
+    @dimen/notification_action_icon_size
+    @style/Widget_Compat_NotificationActionText
+@layout/notification_template_custom_big : reachable=false
+    @layout/notification_template_icon_group
+    @dimen/notification_large_icon_width
+    @dimen/notification_large_icon_height
+    @dimen/notification_right_side_padding_top
+    @layout/notification_template_part_time
+    @layout/notification_template_part_chronometer
+    @style/TextAppearance_Compat_Notification_Info
+@layout/notification_template_icon_group : reachable=false
+    @dimen/notification_large_icon_width
+    @dimen/notification_large_icon_height
+    @dimen/notification_big_circle_margin
+    @dimen/notification_right_icon_size
+@layout/notification_template_part_chronometer : reachable=false
+    @style/TextAppearance_Compat_Notification_Time
+@layout/notification_template_part_time : reachable=false
+    @style/TextAppearance_Compat_Notification_Time
+@mipmap/ic_launcher : reachable=true
+    @color/ic_launcher_background
+    @mipmap/ic_launcher_fg
+@mipmap/ic_launcher_fg : reachable=false
+@mipmap/ic_launcher_round : reachable=true
+    @color/ic_launcher_background
+    @mipmap/ic_launcher_fg
+@string/about_body : reachable=true
+@string/about_license : reachable=true
+@string/about_tagline : reachable=true
+@string/about_third_party : reachable=true
+@string/about_title : reachable=false
+@string/about_version : reachable=true
+@string/action_add_docs : reachable=true
+@string/action_add_model : reachable=true
+@string/action_diagnose : reachable=true
+@string/action_start_chat : reachable=true
+@string/androidx_startup : reachable=true
+@string/app_name : reachable=true
+@string/badge_local : reachable=true
+@string/badge_no_model : reachable=false
+@string/badge_offline : reachable=true
+@string/base64_decode : reachable=true
+@string/base64_encode : reachable=true
+@string/base64_invalid : reachable=true
+@string/calc_error : reachable=true
+@string/calc_result : reachable=true
+@string/call_notification_answer_action : reachable=false
+@string/call_notification_answer_video_action : reachable=false
+@string/call_notification_decline_action : reachable=false
+@string/call_notification_hang_up_action : reachable=false
+@string/call_notification_incoming_text : reachable=false
+@string/call_notification_ongoing_text : reachable=false
+@string/call_notification_screening_text : reachable=false
+@string/cancel : reachable=true
+@string/chat_context_overflow : reachable=false
+@string/chat_context_usage : reachable=true
+@string/chat_copied : reachable=false
+@string/chat_copy : reachable=true
+@string/chat_delete_message : reachable=false
+@string/chat_delete_session : reachable=false
+@string/chat_edit_message : reachable=false
+@string/chat_empty : reachable=true
+@string/chat_error : reachable=true
+@string/chat_export : reachable=false
+@string/chat_export_json : reachable=false
+@string/chat_export_md : reachable=false
+@string/chat_export_pdf : reachable=false
+@string/chat_export_txt : reachable=false
+@string/chat_exported : reachable=false
+@string/chat_hint : reachable=true
+@string/chat_language_directive : reachable=true
+@string/chat_loading_model : reachable=false
+@string/chat_memory_saved : reachable=false
+@string/chat_model_load_failed : reachable=true
+@string/chat_need_model : reachable=false
+@string/chat_need_model_desc : reachable=true
+@string/chat_new_session : reachable=false
+@string/chat_param_max_tokens : reachable=true
+@string/chat_param_min_p : reachable=true
+@string/chat_param_repeat : reachable=true
+@string/chat_param_seed : reachable=true
+@string/chat_param_temperature : reachable=true
+@string/chat_param_top_k : reachable=true
+@string/chat_param_top_p : reachable=true
+@string/chat_params : reachable=true
+@string/chat_presets : reachable=false
+@string/chat_rag_enabled : reachable=true
+@string/chat_regenerate : reachable=true
+@string/chat_rename_session : reachable=false
+@string/chat_save_memory : reachable=true
+@string/chat_send : reachable=false
+@string/chat_sessions : reachable=true
+@string/chat_stop : reachable=false
+@string/chat_stop_seq_note : reachable=false
+@string/chat_system_prompt : reachable=true
+@string/chat_thinking : reachable=false
+@string/chat_title : reachable=false
+@string/chat_tokens_per_sec : reachable=true
+@string/close : reachable=true
+@string/close_drawer : reachable=false
+@string/close_sheet : reachable=false
+@string/compat_fail : reachable=true
+@string/compat_pass : reachable=true
+@string/compat_title : reachable=true
+@string/compat_warn : reachable=true
+@string/cores_fmt : reachable=true
+@string/dashboard_abi : reachable=true
+@string/dashboard_active_model : reachable=true
+@string/dashboard_android : reachable=true
+@string/dashboard_cores : reachable=true
+@string/dashboard_device_profile : reachable=true
+@string/dashboard_memory : reachable=true
+@string/dashboard_model_status : reachable=true
+@string/dashboard_no_model_installed : reachable=true
+@string/dashboard_quick_actions : reachable=true
+@string/dashboard_storage_free : reachable=true
+@string/dashboard_subtitle : reachable=true
+@string/dashboard_title : reachable=true
+@string/dashboard_vulkan : reachable=true
+@string/default_error_message : reachable=true
+@string/default_popup_window_title : reachable=true
+@string/delete : reachable=true
+@string/diag_device : reachable=true
+@string/diag_engine : reachable=true
+@string/diag_engine_loaded : reachable=true
+@string/diag_engine_none : reachable=true
+@string/diag_export : reachable=true
+@string/diag_gpu : reachable=true
+@string/diag_low_ram : reachable=true
+@string/diag_profile : reachable=true
+@string/diag_ram_avail : reachable=true
+@string/diag_ram_total : reachable=true
+@string/diag_refresh : reachable=true
+@string/diag_storage : reachable=true
+@string/diag_thermal : reachable=true
+@string/diag_threads : reachable=true
+@string/diag_title : reachable=true
+@string/diag_vulkan_no : reachable=false
+@string/diag_vulkan_ok : reachable=false
+@string/docs_chunks : reachable=true
+@string/docs_delete : reachable=false
+@string/docs_empty : reachable=true
+@string/docs_import : reachable=true
+@string/docs_import_failed : reachable=true
+@string/docs_import_progress : reachable=true
+@string/docs_import_success : reachable=true
+@string/docs_need_embedder : reachable=false
+@string/docs_no_results : reachable=true
+@string/docs_results : reachable=true
+@string/docs_score : reachable=true
+@string/docs_search : reachable=false
+@string/docs_search_hint : reachable=true
+@string/docs_supported : reachable=true
+@string/docs_title : reachable=true
+@string/dropdown_menu : reachable=false
+@string/engine_state_error : reachable=true
+@string/engine_state_generating : reachable=true
+@string/engine_state_idle : reachable=true
+@string/engine_state_loading : reachable=true
+@string/error : reachable=false
+@string/file_size_gb : reachable=false
+@string/file_size_kb : reachable=false
+@string/file_size_mb : reachable=false
+@string/hash_compute : reachable=true
+@string/hash_input : reachable=true
+@string/in_progress : reachable=true
+@string/indeterminate : reachable=true
+@string/json_invalid : reachable=true
+@string/json_minify : reachable=true
+@string/json_pretty : reachable=true
+@string/json_valid : reachable=false
+@string/lang_ar : reachable=true
+@string/lang_en : reachable=true
+@string/lang_system : reachable=true
+@string/loading : reachable=false
+@string/lock_confirm_pin : reachable=true
+@string/lock_enter_pin : reachable=true
+@string/lock_mismatch : reachable=true
+@string/lock_set_pin : reachable=true
+@string/lock_title : reachable=true
+@string/lock_unlock : reachable=true
+@string/lock_use_biometrics_note : reachable=true
+@string/lock_wrong : reachable=true
+@string/m3c_bottom_sheet_collapse_description : reachable=false
+@string/m3c_bottom_sheet_dismiss_description : reachable=false
+@string/m3c_bottom_sheet_drag_handle_description : reachable=false
+@string/m3c_bottom_sheet_expand_description : reachable=false
+@string/m3c_bottom_sheet_pane_title : reachable=false
+@string/m3c_date_input_headline : reachable=false
+@string/m3c_date_input_headline_description : reachable=false
+@string/m3c_date_input_invalid_for_pattern : reachable=false
+@string/m3c_date_input_invalid_not_allowed : reachable=false
+@string/m3c_date_input_invalid_year_range : reachable=false
+@string/m3c_date_input_label : reachable=false
+@string/m3c_date_input_no_input_description : reachable=false
+@string/m3c_date_input_title : reachable=false
+@string/m3c_date_picker_headline : reachable=false
+@string/m3c_date_picker_headline_description : reachable=false
+@string/m3c_date_picker_navigate_to_year_description : reachable=false
+@string/m3c_date_picker_no_selection_description : reachable=false
+@string/m3c_date_picker_scroll_to_earlier_years : reachable=false
+@string/m3c_date_picker_scroll_to_later_years : reachable=false
+@string/m3c_date_picker_switch_to_calendar_mode : reachable=false
+@string/m3c_date_picker_switch_to_day_selection : reachable=false
+@string/m3c_date_picker_switch_to_input_mode : reachable=false
+@string/m3c_date_picker_switch_to_next_month : reachable=false
+@string/m3c_date_picker_switch_to_previous_month : reachable=false
+@string/m3c_date_picker_switch_to_year_selection : reachable=false
+@string/m3c_date_picker_title : reachable=false
+@string/m3c_date_picker_today_description : reachable=false
+@string/m3c_date_picker_year_picker_pane_title : reachable=false
+@string/m3c_date_range_input_invalid_range_input : reachable=false
+@string/m3c_date_range_input_title : reachable=false
+@string/m3c_date_range_picker_day_in_range : reachable=false
+@string/m3c_date_range_picker_end_headline : reachable=false
+@string/m3c_date_range_picker_scroll_to_next_month : reachable=false
+@string/m3c_date_range_picker_scroll_to_previous_month : reachable=false
+@string/m3c_date_range_picker_start_headline : reachable=false
+@string/m3c_date_range_picker_title : reachable=false
+@string/m3c_dialog : reachable=true
+@string/m3c_dropdown_menu_collapsed : reachable=false
+@string/m3c_dropdown_menu_expanded : reachable=false
+@string/m3c_dropdown_menu_toggle : reachable=false
+@string/m3c_search_bar_search : reachable=false
+@string/m3c_snackbar_dismiss : reachable=false
+@string/m3c_suggestions_available : reachable=false
+@string/m3c_time_picker_am : reachable=false
+@string/m3c_time_picker_hour : reachable=false
+@string/m3c_time_picker_hour_24h_suffix : reachable=false
+@string/m3c_time_picker_hour_selection : reachable=false
+@string/m3c_time_picker_hour_suffix : reachable=false
+@string/m3c_time_picker_hour_text_field : reachable=false
+@string/m3c_time_picker_minute : reachable=false
+@string/m3c_time_picker_minute_selection : reachable=false
+@string/m3c_time_picker_minute_suffix : reachable=false
+@string/m3c_time_picker_minute_text_field : reachable=false
+@string/m3c_time_picker_period_toggle_description : reachable=false
+@string/m3c_time_picker_pm : reachable=false
+@string/m3c_tooltip_long_press_label : reachable=false
+@string/m3c_tooltip_pane_description : reachable=false
+@string/memory_add : reachable=false
+@string/memory_capture_hint : reachable=false
+@string/memory_content : reachable=false
+@string/memory_delete : reachable=false
+@string/memory_disabled : reachable=false
+@string/memory_empty : reachable=false
+@string/memory_enabled : reachable=false
+@string/memory_inject_hint : reachable=false
+@string/memory_title : reachable=false
+@string/model_active : reachable=true
+@string/model_active_embedder : reachable=true
+@string/model_active_mmproj : reachable=true
+@string/model_active_whisper : reachable=true
+@string/model_arch : reachable=true
+@string/model_delete : reachable=false
+@string/model_delete_confirm : reachable=false
+@string/model_download : reachable=false
+@string/model_download_failed : reachable=false
+@string/model_download_hint : reachable=false
+@string/model_download_running : reachable=false
+@string/model_import_failed : reachable=true
+@string/model_import_progress : reachable=true
+@string/model_import_success : reachable=false
+@string/model_kind_chat : reachable=true
+@string/model_kind_embedder : reachable=true
+@string/model_kind_mmproj : reachable=true
+@string/model_kind_unknown : reachable=true
+@string/model_kind_whisper : reachable=true
+@string/model_network_blocked : reachable=false
+@string/model_not_gguf : reachable=false
+@string/model_params : reachable=false
+@string/model_quant : reachable=true
+@string/model_set_active : reachable=true
+@string/model_set_embedder : reachable=true
+@string/model_set_mmproj : reachable=true
+@string/model_set_whisper : reachable=true
+@string/model_size : reachable=true
+@string/models_empty : reachable=true
+@string/models_empty_hint : reachable=true
+@string/models_import : reachable=true
+@string/models_import_hint : reachable=true
+@string/models_title : reachable=true
+@string/nav_chat : reachable=true
+@string/nav_dashboard : reachable=true
+@string/nav_models : reachable=true
+@string/nav_settings : reachable=true
+@string/nav_tools : reachable=true
+@string/nav_vision : reachable=true
+@string/nav_voice : reachable=true
+@string/navigation_menu : reachable=false
+@string/no : reachable=true
+@string/none : reachable=true
+@string/not_selected : reachable=true
+@string/ok : reachable=false
+@string/preset_balanced : reachable=true
+@string/preset_creative : reachable=true
+@string/preset_custom : reachable=true
+@string/preset_precise : reachable=true
+@string/privacy_attestation_ok : reachable=true
+@string/privacy_contract_chat : reachable=true
+@string/privacy_contract_download : reachable=true
+@string/privacy_contract_stt : reachable=true
+@string/privacy_contract_tts : reachable=true
+@string/privacy_contracts : reachable=true
+@string/privacy_crash_reports : reachable=true
+@string/privacy_data_map : reachable=true
+@string/privacy_map_chats : reachable=true
+@string/privacy_map_files : reachable=true
+@string/privacy_network_allowed : reachable=true
+@string/privacy_network_blocked : reachable=true
+@string/privacy_offline_attestation : reachable=true
+@string/privacy_title : reachable=true
+@string/privacy_toggle_network : reachable=true
+@string/profile_balanced : reachable=true
+@string/profile_entry : reachable=true
+@string/profile_extreme : reachable=true
+@string/profile_performance : reachable=true
+@string/rag_sources : reachable=true
+@string/ram_gb : reachable=false
+@string/range_end : reachable=false
+@string/range_start : reachable=false
+@string/regex_invalid : reachable=true
+@string/regex_matches : reachable=true
+@string/regex_pattern : reachable=true
+@string/regex_test_text : reachable=true
+@string/save : reachable=true
+@string/selected : reachable=true
+@string/settings_about : reachable=true
+@string/settings_app_lock : reachable=false
+@string/settings_app_lock_on : reachable=true
+@string/settings_app_lock_remove : reachable=true
+@string/settings_app_lock_set : reachable=true
+@string/settings_appearance : reachable=true
+@string/settings_auto_unload : reachable=true
+@string/settings_batch : reachable=true
+@string/settings_clear_chats : reachable=true
+@string/settings_clear_docs : reachable=true
+@string/settings_clear_memory : reachable=true
+@string/settings_confirm : reachable=false
+@string/settings_context : reachable=true
+@string/settings_data : reachable=true
+@string/settings_diagnostics : reachable=true
+@string/settings_dynamic_colors : reachable=true
+@string/settings_engine : reachable=true
+@string/settings_export_all : reachable=false
+@string/settings_flash_attention : reachable=true
+@string/settings_gpu_layers : reachable=false
+@string/settings_gpu_layers_note : reachable=true
+@string/settings_language : reachable=false
+@string/settings_max_ram_pct : reachable=true
+@string/settings_memory_mgmt : reachable=true
+@string/settings_privacy : reachable=true
+@string/settings_reset_defaults : reachable=false
+@string/settings_security : reachable=true
+@string/settings_theme_mode : reachable=false
+@string/settings_threads : reachable=true
+@string/settings_title : reachable=true
+@string/state_empty : reachable=true
+@string/state_off : reachable=true
+@string/state_on : reachable=true
+@string/status_bar_notification_info_overflow : reachable=false
+@string/switch_role : reachable=true
+@string/tab : reachable=true
+@string/template_percent : reachable=true
+@string/theme_dark : reachable=true
+@string/theme_light : reachable=true
+@string/theme_system : reachable=true
+@string/thermal_moderate : reachable=false
+@string/thermal_none : reachable=false
+@string/thermal_severe : reachable=false
+@string/tool_base64 : reachable=true
+@string/tool_calculator : reachable=true
+@string/tool_copied : reachable=true
+@string/tool_hash : reachable=true
+@string/tool_json : reachable=true
+@string/tool_regex : reachable=true
+@string/tool_units : reachable=true
+@string/tool_uuid : reachable=true
+@string/tools_title : reachable=true
+@string/tooltip_description : reachable=false
+@string/tooltip_label : reachable=false
+@string/units_area : reachable=true
+@string/units_data : reachable=true
+@string/units_energy : reachable=true
+@string/units_from : reachable=true
+@string/units_length : reachable=true
+@string/units_mass : reachable=true
+@string/units_pressure : reachable=true
+@string/units_speed : reachable=true
+@string/units_temperature : reachable=true
+@string/units_time : reachable=true
+@string/units_to : reachable=true
+@string/units_volume : reachable=true
+@string/uuid_count : reachable=true
+@string/uuid_generate : reachable=true
+@string/vision_ask : reachable=true
+@string/vision_desc : reachable=true
+@string/vision_failed : reachable=true
+@string/vision_need_chat_model : reachable=false
+@string/vision_need_mmproj : reachable=true
+@string/vision_need_two_models : reachable=true
+@string/vision_pick : reachable=true
+@string/vision_running : reachable=true
+@string/vision_title : reachable=true
+@string/voice_duration : reachable=true
+@string/voice_lang : reachable=true
+@string/voice_mic_permission : reachable=true
+@string/voice_need_model : reachable=true
+@string/voice_record : reachable=true
+@string/voice_record_failed : reachable=true
+@string/voice_result : reachable=true
+@string/voice_speak : reachable=true
+@string/voice_stop_recording : reachable=true
+@string/voice_title : reachable=true
+@string/voice_transcribe : reachable=true
+@string/voice_transcribe_failed : reachable=false
+@string/voice_transcribing : reachable=true
+@string/voice_tts_unavailable : reachable=true
+@string/yes : reachable=true
+@style/DialogWindowTheme : reachable=true
+@style/EdgeToEdgeFloatingDialogTheme : reachable=false
+    @integer/m3c_window_layout_in_display_cutout_mode
+@style/EdgeToEdgeFloatingDialogWindowTheme : reachable=false
+    @style/EdgeToEdgeFloatingDialogTheme
+@style/FloatingDialogTheme : reachable=false
+@style/FloatingDialogWindowTheme : reachable=false
+    @style/FloatingDialogTheme
+@style/TextAppearance_Compat_Notification : reachable=false
+@style/TextAppearance_Compat_Notification_Info : reachable=false
+@style/TextAppearance_Compat_Notification_Line2 : reachable=false
+    @style/TextAppearance_Compat_Notification_Info
+@style/TextAppearance_Compat_Notification_Time : reachable=false
+@style/TextAppearance_Compat_Notification_Title : reachable=false
+@style/Theme_DRSAI : reachable=true
+@style/Widget_Compat_NotificationActionContainer : reachable=false
+    @drawable/notification_action_background
+@style/Widget_Compat_NotificationActionText : reachable=false
+    @color/androidx_core_secondary_text_default_material_light
+    @dimen/notification_action_text_size
+@xml/file_paths : reachable=true
+
+The root reachable resources are:
+ id:accessibility_action_clickable_span:2131034112
+ id:accessibility_custom_action_0:2131034113
+ id:accessibility_custom_action_1:2131034114
+ id:accessibility_custom_action_10:2131034115
+ id:accessibility_custom_action_11:2131034116
+ id:accessibility_custom_action_12:2131034117
+ id:accessibility_custom_action_13:2131034118
+ id:accessibility_custom_action_14:2131034119
+ id:accessibility_custom_action_15:2131034120
+ id:accessibility_custom_action_16:2131034121
+ id:accessibility_custom_action_17:2131034122
+ id:accessibility_custom_action_18:2131034123
+ id:accessibility_custom_action_19:2131034124
+ id:accessibility_custom_action_2:2131034125
+ id:accessibility_custom_action_20:2131034126
+ id:accessibility_custom_action_21:2131034127
+ id:accessibility_custom_action_22:2131034128
+ id:accessibility_custom_action_23:2131034129
+ id:accessibility_custom_action_24:2131034130
+ id:accessibility_custom_action_25:2131034131
+ id:accessibility_custom_action_26:2131034132
+ id:accessibility_custom_action_27:2131034133
+ id:accessibility_custom_action_28:2131034134
+ id:accessibility_custom_action_29:2131034135
+ id:accessibility_custom_action_3:2131034136
+ id:accessibility_custom_action_30:2131034137
+ id:accessibility_custom_action_31:2131034138
+ id:accessibility_custom_action_4:2131034139
+ id:accessibility_custom_action_5:2131034140
+ id:accessibility_custom_action_6:2131034141
+ id:accessibility_custom_action_7:2131034142
+ id:accessibility_custom_action_8:2131034143
+ id:accessibility_custom_action_9:2131034144
+ id:androidx_compose_ui_view_composition_context:2131034150
+ id:compose_view_saveable_id_tag:2131034154
+ id:consume_window_insets_tag:2131034155
+ id:hide_graphics_layer_in_inspector_tag:2131034159
+ id:hide_in_inspector_tag:2131034161
+ id:inspection_slot_table_set:2131034165
+ id:is_pooling_container_tag:2131034166
+ id:pooling_container_listener_holder_tag:2131034175
+ id:report_drawn:2131034176
+ id:tag_accessibility_actions:2131034179
+ id:tag_accessibility_clickable_spans:2131034180
+ id:tag_accessibility_heading:2131034181
+ id:tag_accessibility_pane_title:2131034182
+ id:tag_on_apply_window_listener:2131034183
+ id:tag_screen_reader_focusable:2131034186
+ id:tag_state_description:2131034187
+ id:tag_unhandled_key_event_manager:2131034189
+ id:tag_unhandled_key_listeners:2131034190
+ id:tag_window_insets_animation_callback:2131034191
+ id:view_tree_lifecycle_owner:2131034196
+ id:view_tree_on_back_pressed_dispatcher_owner:2131034197
+ id:view_tree_saved_state_registry_owner:2131034198
+ id:view_tree_view_model_store_owner:2131034199
+ id:wrapped_composition_tag:2131034200
+ mipmap:ic_launcher:2131230720
+ mipmap:ic_launcher_round:2131230722
+ string:about_body:2131296256
+ string:about_license:2131296257
+ string:about_tagline:2131296258
+ string:about_third_party:2131296259
+ string:about_version:2131296261
+ string:action_add_docs:2131296262
+ string:action_add_model:2131296263
+ string:action_diagnose:2131296264
+ string:action_start_chat:2131296265
+ string:androidx_startup:2131296266
+ string:app_name:2131296267
+ string:badge_local:2131296268
+ string:badge_offline:2131296270
+ string:base64_decode:2131296271
+ string:base64_encode:2131296272
+ string:base64_invalid:2131296273
+ string:calc_error:2131296274
+ string:calc_result:2131296275
+ string:cancel:2131296283
+ string:chat_context_usage:2131296285
+ string:chat_copy:2131296287
+ string:chat_empty:2131296291
+ string:chat_error:2131296292
+ string:chat_hint:2131296299
+ string:chat_language_directive:2131296300
+ string:chat_model_load_failed:2131296303
+ string:chat_need_model_desc:2131296305
+ string:chat_param_max_tokens:2131296307
+ string:chat_param_min_p:2131296308
+ string:chat_param_repeat:2131296309
+ string:chat_param_seed:2131296310
+ string:chat_param_temperature:2131296311
+ string:chat_param_top_k:2131296312
+ string:chat_param_top_p:2131296313
+ string:chat_params:2131296314
+ string:chat_rag_enabled:2131296316
+ string:chat_regenerate:2131296317
+ string:chat_save_memory:2131296319
+ string:chat_sessions:2131296321
+ string:chat_system_prompt:2131296324
+ string:chat_tokens_per_sec:2131296327
+ string:close:2131296328
+ string:compat_fail:2131296331
+ string:compat_pass:2131296332
+ string:compat_title:2131296333
+ string:compat_warn:2131296334
+ string:cores_fmt:2131296335
+ string:dashboard_abi:2131296336
+ string:dashboard_active_model:2131296337
+ string:dashboard_android:2131296338
+ string:dashboard_cores:2131296339
+ string:dashboard_device_profile:2131296340
+ string:dashboard_memory:2131296341
+ string:dashboard_model_status:2131296342
+ string:dashboard_no_model_installed:2131296343
+ string:dashboard_quick_actions:2131296344
+ string:dashboard_storage_free:2131296345
+ string:dashboard_subtitle:2131296346
+ string:dashboard_title:2131296347
+ string:dashboard_vulkan:2131296348
+ string:default_error_message:2131296349
+ string:default_popup_window_title:2131296350
+ string:delete:2131296351
+ string:diag_device:2131296352
+ string:diag_engine:2131296353
+ string:diag_engine_loaded:2131296354
+ string:diag_engine_none:2131296355
+ string:diag_export:2131296356
+ string:diag_gpu:2131296357
+ string:diag_low_ram:2131296358
+ string:diag_profile:2131296359
+ string:diag_ram_avail:2131296360
+ string:diag_ram_total:2131296361
+ string:diag_refresh:2131296362
+ string:diag_storage:2131296363
+ string:diag_thermal:2131296364
+ string:diag_threads:2131296365
+ string:diag_title:2131296366
+ string:docs_chunks:2131296369
+ string:docs_empty:2131296371
+ string:docs_import:2131296372
+ string:docs_import_failed:2131296373
+ string:docs_import_progress:2131296374
+ string:docs_import_success:2131296375
+ string:docs_no_results:2131296377
+ string:docs_results:2131296378
+ string:docs_score:2131296379
+ string:docs_search_hint:2131296381
+ string:docs_supported:2131296382
+ string:docs_title:2131296383
+ string:engine_state_error:2131296385
+ string:engine_state_generating:2131296386
+ string:engine_state_idle:2131296387
+ string:engine_state_loading:2131296388
+ string:hash_compute:2131296393
+ string:hash_input:2131296394
+ string:in_progress:2131296395
+ string:indeterminate:2131296396
+ string:json_invalid:2131296397
+ string:json_minify:2131296398
+ string:json_pretty:2131296399
+ string:lang_ar:2131296401
+ string:lang_en:2131296402
+ string:lang_system:2131296403
+ string:lock_confirm_pin:2131296405
+ string:lock_enter_pin:2131296406
+ string:lock_mismatch:2131296407
+ string:lock_set_pin:2131296408
+ string:lock_title:2131296409
+ string:lock_unlock:2131296410
+ string:lock_use_biometrics_note:2131296411
+ string:lock_wrong:2131296412
+ string:m3c_dialog:2131296449
+ string:model_active:2131296479
+ string:model_active_embedder:2131296480
+ string:model_active_mmproj:2131296481
+ string:model_active_whisper:2131296482
+ string:model_arch:2131296483
+ string:model_import_failed:2131296490
+ string:model_import_progress:2131296491
+ string:model_kind_chat:2131296493
+ string:model_kind_embedder:2131296494
+ string:model_kind_mmproj:2131296495
+ string:model_kind_unknown:2131296496
+ string:model_kind_whisper:2131296497
+ string:model_quant:2131296501
+ string:model_set_active:2131296502
+ string:model_set_embedder:2131296503
+ string:model_set_mmproj:2131296504
+ string:model_set_whisper:2131296505
+ string:model_size:2131296506
+ string:models_empty:2131296507
+ string:models_empty_hint:2131296508
+ string:models_import:2131296509
+ string:models_import_hint:2131296510
+ string:models_title:2131296511
+ string:nav_chat:2131296512
+ string:nav_dashboard:2131296513
+ string:nav_models:2131296514
+ string:nav_settings:2131296515
+ string:nav_tools:2131296516
+ string:nav_vision:2131296517
+ string:nav_voice:2131296518
+ string:no:2131296520
+ string:none:2131296521
+ string:not_selected:2131296522
+ string:preset_balanced:2131296524
+ string:preset_creative:2131296525
+ string:preset_custom:2131296526
+ string:preset_precise:2131296527
+ string:privacy_attestation_ok:2131296528
+ string:privacy_contract_chat:2131296529
+ string:privacy_contract_download:2131296530
+ string:privacy_contract_stt:2131296531
+ string:privacy_contract_tts:2131296532
+ string:privacy_contracts:2131296533
+ string:privacy_crash_reports:2131296534
+ string:privacy_data_map:2131296535
+ string:privacy_map_chats:2131296536
+ string:privacy_map_files:2131296537
+ string:privacy_network_allowed:2131296538
+ string:privacy_network_blocked:2131296539
+ string:privacy_offline_attestation:2131296540
+ string:privacy_title:2131296541
+ string:privacy_toggle_network:2131296542
+ string:profile_balanced:2131296543
+ string:profile_entry:2131296544
+ string:profile_extreme:2131296545
+ string:profile_performance:2131296546
+ string:rag_sources:2131296547
+ string:regex_invalid:2131296551
+ string:regex_matches:2131296552
+ string:regex_pattern:2131296553
+ string:regex_test_text:2131296554
+ string:save:2131296555
+ string:selected:2131296556
+ string:settings_about:2131296557
+ string:settings_app_lock_on:2131296559
+ string:settings_app_lock_remove:2131296560
+ string:settings_app_lock_set:2131296561
+ string:settings_appearance:2131296562
+ string:settings_auto_unload:2131296563
+ string:settings_batch:2131296564
+ string:settings_clear_chats:2131296565
+ string:settings_clear_docs:2131296566
+ string:settings_clear_memory:2131296567
+ string:settings_context:2131296569
+ string:settings_data:2131296570
+ string:settings_diagnostics:2131296571
+ string:settings_dynamic_colors:2131296572
+ string:settings_engine:2131296573
+ string:settings_flash_attention:2131296575
+ string:settings_gpu_layers_note:2131296577
+ string:settings_max_ram_pct:2131296579
+ string:settings_memory_mgmt:2131296580
+ string:settings_privacy:2131296581
+ string:settings_security:2131296583
+ string:settings_threads:2131296585
+ string:settings_title:2131296586
+ string:state_empty:2131296587
+ string:state_off:2131296588
+ string:state_on:2131296589
+ string:switch_role:2131296591
+ string:tab:2131296592
+ string:template_percent:2131296593
+ string:theme_dark:2131296594
+ string:theme_light:2131296595
+ string:theme_system:2131296596
+ string:tool_base64:2131296600
+ string:tool_calculator:2131296601
+ string:tool_copied:2131296602
+ string:tool_hash:2131296603
+ string:tool_json:2131296604
+ string:tool_regex:2131296605
+ string:tool_units:2131296606
+ string:tool_uuid:2131296607
+ string:tools_title:2131296608
+ string:units_area:2131296611
+ string:units_data:2131296612
+ string:units_energy:2131296613
+ string:units_from:2131296614
+ string:units_length:2131296615
+ string:units_mass:2131296616
+ string:units_pressure:2131296617
+ string:units_speed:2131296618
+ string:units_temperature:2131296619
+ string:units_time:2131296620
+ string:units_to:2131296621
+ string:units_volume:2131296622
+ string:uuid_count:2131296623
+ string:uuid_generate:2131296624
+ string:vision_ask:2131296625
+ string:vision_desc:2131296626
+ string:vision_failed:2131296627
+ string:vision_need_mmproj:2131296629
+ string:vision_need_two_models:2131296630
+ string:vision_pick:2131296631
+ string:vision_running:2131296632
+ string:vision_title:2131296633
+ string:voice_duration:2131296634
+ string:voice_lang:2131296635
+ string:voice_mic_permission:2131296636
+ string:voice_need_model:2131296637
+ string:voice_record:2131296638
+ string:voice_record_failed:2131296639
+ string:voice_result:2131296640
+ string:voice_speak:2131296641
+ string:voice_stop_recording:2131296642
+ string:voice_title:2131296643
+ string:voice_transcribe:2131296644
+ string:voice_transcribing:2131296646
+ string:voice_tts_unavailable:2131296647
+ string:yes:2131296648
+ style:DialogWindowTheme:2131361792
+ style:Theme_DRSAI:2131361802
+ xml:file_paths:2131492864
+Unused resources are: 
+ color:androidx_core_ripple_material_light:2130837504
+ color:androidx_core_secondary_text_default_material_light:2130837505
+ color:call_notification_answer_color:2130837506
+ color:call_notification_decline_color:2130837507
+ color:notification_action_color_filter:2130837509
+ color:notification_icon_bg_color:2130837510
+ color:vector_tint_color:2130837511
+ color:vector_tint_theme_color:2130837512
+ dimen:compat_button_inset_horizontal_material:2130903040
+ dimen:compat_button_inset_vertical_material:2130903041
+ dimen:compat_button_padding_horizontal_material:2130903042
+ dimen:compat_button_padding_vertical_material:2130903043
+ dimen:compat_control_corner_material:2130903044
+ dimen:compat_notification_large_icon_max_height:2130903045
+ dimen:compat_notification_large_icon_max_width:2130903046
+ dimen:notification_action_icon_size:2130903047
+ dimen:notification_action_text_size:2130903048
+ dimen:notification_big_circle_margin:2130903049
+ dimen:notification_content_margin_start:2130903050
+ dimen:notification_large_icon_height:2130903051
+ dimen:notification_large_icon_width:2130903052
+ dimen:notification_main_column_padding_top:2130903053
+ dimen:notification_media_narrow_margin:2130903054
+ dimen:notification_right_icon_size:2130903055
+ dimen:notification_right_side_padding_top:2130903056
+ dimen:notification_small_icon_background_padding:2130903057
+ dimen:notification_small_icon_size_as_large:2130903058
+ dimen:notification_subtext_size:2130903059
+ dimen:notification_top_pad:2130903060
+ dimen:notification_top_pad_large_text:2130903061
+ drawable:ic_call_answer:2130968576
+ drawable:ic_call_answer_low:2130968577
+ drawable:ic_call_answer_video:2130968578
+ drawable:ic_call_answer_video_low:2130968579
+ drawable:ic_call_decline:2130968580
+ drawable:ic_call_decline_low:2130968581
+ drawable:notification_action_background:2130968582
+ drawable:notification_bg:2130968583
+ drawable:notification_bg_low:2130968584
+ drawable:notification_bg_low_normal:2130968585
+ drawable:notification_bg_low_pressed:2130968586
+ drawable:notification_bg_normal:2130968587
+ drawable:notification_bg_normal_pressed:2130968588
+ drawable:notification_icon_background:2130968589
+ drawable:notification_oversize_large_icon_bg:2130968590
+ drawable:notification_template_icon_bg:2130968591
+ drawable:notification_template_icon_low_bg:2130968592
+ drawable:notification_tile_bg:2130968593
+ drawable:notify_panel_notification_icon_bg:2130968594
+ id:action_container:2131034145
+ id:action_divider:2131034146
+ id:action_image:2131034147
+ id:action_text:2131034148
+ id:actions:2131034149
+ id:async:2131034151
+ id:blocking:2131034152
+ id:chronometer:2131034153
+ id:dialog_button:2131034156
+ id:edit_text_id:2131034157
+ id:forever:2131034158
+ id:hide_ime_id:2131034160
+ id:icon:2131034162
+ id:icon_group:2131034163
+ id:info:2131034164
+ id:italic:2131034167
+ id:line1:2131034168
+ id:line3:2131034169
+ id:nav_controller_view_tag:2131034170
+ id:normal:2131034171
+ id:notification_background:2131034172
+ id:notification_main_column:2131034173
+ id:notification_main_column_container:2131034174
+ id:right_icon:2131034177
+ id:right_side:2131034178
+ id:tag_on_receive_content_listener:2131034184
+ id:tag_on_receive_content_mime_types:2131034185
+ id:tag_transition_group:2131034188
+ id:text:2131034192
+ id:text2:2131034193
+ id:time:2131034194
+ id:title:2131034195
+ integer:m3c_window_layout_in_display_cutout_mode:2131099648
+ integer:status_bar_notification_info_maxnum:2131099649
+ layout:custom_dialog:2131165184
+ layout:ime_base_split_test_activity:2131165185
+ layout:ime_secondary_split_test_activity:2131165186
+ layout:notification_action:2131165187
+ layout:notification_action_tombstone:2131165188
+ layout:notification_template_custom_big:2131165189
+ layout:notification_template_icon_group:2131165190
+ layout:notification_template_part_chronometer:2131165191
+ layout:notification_template_part_time:2131165192
+ string:about_title:2131296260
+ string:badge_no_model:2131296269
+ string:call_notification_answer_action:2131296276
+ string:call_notification_answer_video_action:2131296277
+ string:call_notification_decline_action:2131296278
+ string:call_notification_hang_up_action:2131296279
+ string:call_notification_incoming_text:2131296280
+ string:call_notification_ongoing_text:2131296281
+ string:call_notification_screening_text:2131296282
+ string:chat_context_overflow:2131296284
+ string:chat_copied:2131296286
+ string:chat_delete_message:2131296288
+ string:chat_delete_session:2131296289
+ string:chat_edit_message:2131296290
+ string:chat_export:2131296293
+ string:chat_export_json:2131296294
+ string:chat_export_md:2131296295
+ string:chat_export_pdf:2131296296
+ string:chat_export_txt:2131296297
+ string:chat_exported:2131296298
+ string:chat_loading_model:2131296301
+ string:chat_memory_saved:2131296302
+ string:chat_need_model:2131296304
+ string:chat_new_session:2131296306
+ string:chat_presets:2131296315
+ string:chat_rename_session:2131296318
+ string:chat_send:2131296320
+ string:chat_stop:2131296322
+ string:chat_stop_seq_note:2131296323
+ string:chat_thinking:2131296325
+ string:chat_title:2131296326
+ string:close_drawer:2131296329
+ string:close_sheet:2131296330
+ string:diag_vulkan_no:2131296367
+ string:diag_vulkan_ok:2131296368
+ string:docs_delete:2131296370
+ string:docs_need_embedder:2131296376
+ string:docs_search:2131296380
+ string:dropdown_menu:2131296384
+ string:error:2131296389
+ string:file_size_gb:2131296390
+ string:file_size_kb:2131296391
+ string:file_size_mb:2131296392
+ string:json_valid:2131296400
+ string:loading:2131296404
+ string:m3c_bottom_sheet_collapse_description:2131296413
+ string:m3c_bottom_sheet_dismiss_description:2131296414
+ string:m3c_bottom_sheet_drag_handle_description:2131296415
+ string:m3c_bottom_sheet_expand_description:2131296416
+ string:m3c_bottom_sheet_pane_title:2131296417
+ string:m3c_date_input_headline:2131296418
+ string:m3c_date_input_headline_description:2131296419
+ string:m3c_date_input_invalid_for_pattern:2131296420
+ string:m3c_date_input_invalid_not_allowed:2131296421
+ string:m3c_date_input_invalid_year_range:2131296422
+ string:m3c_date_input_label:2131296423
+ string:m3c_date_input_no_input_description:2131296424
+ string:m3c_date_input_title:2131296425
+ string:m3c_date_picker_headline:2131296426
+ string:m3c_date_picker_headline_description:2131296427
+ string:m3c_date_picker_navigate_to_year_description:2131296428
+ string:m3c_date_picker_no_selection_description:2131296429
+ string:m3c_date_picker_scroll_to_earlier_years:2131296430
+ string:m3c_date_picker_scroll_to_later_years:2131296431
+ string:m3c_date_picker_switch_to_calendar_mode:2131296432
+ string:m3c_date_picker_switch_to_day_selection:2131296433
+ string:m3c_date_picker_switch_to_input_mode:2131296434
+ string:m3c_date_picker_switch_to_next_month:2131296435
+ string:m3c_date_picker_switch_to_previous_month:2131296436
+ string:m3c_date_picker_switch_to_year_selection:2131296437
+ string:m3c_date_picker_title:2131296438
+ string:m3c_date_picker_today_description:2131296439
+ string:m3c_date_picker_year_picker_pane_title:2131296440
+ string:m3c_date_range_input_invalid_range_input:2131296441
+ string:m3c_date_range_input_title:2131296442
+ string:m3c_date_range_picker_day_in_range:2131296443
+ string:m3c_date_range_picker_end_headline:2131296444
+ string:m3c_date_range_picker_scroll_to_next_month:2131296445
+ string:m3c_date_range_picker_scroll_to_previous_month:2131296446
+ string:m3c_date_range_picker_start_headline:2131296447
+ string:m3c_date_range_picker_title:2131296448
+ string:m3c_dropdown_menu_collapsed:2131296450
+ string:m3c_dropdown_menu_expanded:2131296451
+ string:m3c_dropdown_menu_toggle:2131296452
+ string:m3c_search_bar_search:2131296453
+ string:m3c_snackbar_dismiss:2131296454
+ string:m3c_suggestions_available:2131296455
+ string:m3c_time_picker_am:2131296456
+ string:m3c_time_picker_hour:2131296457
+ string:m3c_time_picker_hour_24h_suffix:2131296458
+ string:m3c_time_picker_hour_selection:2131296459
+ string:m3c_time_picker_hour_suffix:2131296460
+ string:m3c_time_picker_hour_text_field:2131296461
+ string:m3c_time_picker_minute:2131296462
+ string:m3c_time_picker_minute_selection:2131296463
+ string:m3c_time_picker_minute_suffix:2131296464
+ string:m3c_time_picker_minute_text_field:2131296465
+ string:m3c_time_picker_period_toggle_description:2131296466
+ string:m3c_time_picker_pm:2131296467
+ string:m3c_tooltip_long_press_label:2131296468
+ string:m3c_tooltip_pane_description:2131296469
+ string:memory_add:2131296470
+ string:memory_capture_hint:2131296471
+ string:memory_content:2131296472
+ string:memory_delete:2131296473
+ string:memory_disabled:2131296474
+ string:memory_empty:2131296475
+ string:memory_enabled:2131296476
+ string:memory_inject_hint:2131296477
+ string:memory_title:2131296478
+ string:model_delete:2131296484
+ string:model_delete_confirm:2131296485
+ string:model_download:2131296486
+ string:model_download_failed:2131296487
+ string:model_download_hint:2131296488
+ string:model_download_running:2131296489
+ string:model_import_success:2131296492
+ string:model_network_blocked:2131296498
+ string:model_not_gguf:2131296499
+ string:model_params:2131296500
+ string:navigation_menu:2131296519
+ string:ok:2131296523
+ string:ram_gb:2131296548
+ string:range_end:2131296549
+ string:range_start:2131296550
+ string:settings_app_lock:2131296558
+ string:settings_confirm:2131296568
+ string:settings_export_all:2131296574
+ string:settings_gpu_layers:2131296576
+ string:settings_language:2131296578
+ string:settings_reset_defaults:2131296582
+ string:settings_theme_mode:2131296584
+ string:status_bar_notification_info_overflow:2131296590
+ string:thermal_moderate:2131296597
+ string:thermal_none:2131296598
+ string:thermal_severe:2131296599
+ string:tooltip_description:2131296609
+ string:tooltip_label:2131296610
+ string:vision_need_chat_model:2131296628
+ string:voice_transcribe_failed:2131296645
+ style:EdgeToEdgeFloatingDialogTheme:2131361793
+ style:EdgeToEdgeFloatingDialogWindowTheme:2131361794
+ style:FloatingDialogTheme:2131361795
+ style:FloatingDialogWindowTheme:2131361796
+ style:TextAppearance_Compat_Notification:2131361797
+ style:TextAppearance_Compat_Notification_Info:2131361798
+ style:TextAppearance_Compat_Notification_Line2:2131361799
+ style:TextAppearance_Compat_Notification_Time:2131361800
+ style:TextAppearance_Compat_Notification_Title:2131361801
+ style:Widget_Compat_NotificationActionContainer:2131361803
+ style:Widget_Compat_NotificationActionText:2131361804

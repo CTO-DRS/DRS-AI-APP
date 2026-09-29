@@ -1,5 +1,7 @@
 package com.drs.ai.features.chat
 
+import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.background
 import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.Arrangement
@@ -28,8 +30,10 @@ import androidx.compose.material.icons.filled.Tune
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Card
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.FilledIconButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.IconButtonDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
@@ -52,6 +56,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.unit.dp
+import androidx.compose.foundation.layout.size
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import com.drs.ai.AppGraph
@@ -185,30 +190,38 @@ fun ChatScreen(nav: NavController, vm: ChatViewModel = viewModel(factory = ChatV
             Row(
                 Modifier
                     .fillMaxWidth()
-                    .padding(8.dp),
+                    .background(MaterialTheme.colorScheme.surfaceContainer)
+                    .padding(horizontal = 12.dp, vertical = 10.dp),
                 verticalAlignment = Alignment.Bottom,
-                horizontalArrangement = Arrangement.spacedBy(8.dp)
+                horizontalArrangement = Arrangement.spacedBy(10.dp)
             ) {
                 OutlinedTextField(
                     value = input,
                     onValueChange = { input = it },
                     modifier = Modifier.weight(1f),
                     placeholder = { Text(stringResource(R.string.chat_hint)) },
+                    shape = RoundedCornerShape(24.dp),
                     maxLines = 4
                 )
                 if (generating) {
-                    OutlinedButton(onClick = { vm.stop() }) {
+                    FilledIconButton(
+                        onClick = { vm.stop() },
+                        colors = IconButtonDefaults.filledIconButtonColors(
+                            containerColor = MaterialTheme.colorScheme.errorContainer,
+                            contentColor = MaterialTheme.colorScheme.onErrorContainer
+                        ),
+                        modifier = Modifier.size(52.dp)
+                    ) {
                         Icon(Icons.Filled.Stop, null)
-                        Spacer(Modifier.width(4.dp))
-                        Text(stringResource(R.string.chat_stop))
                     }
                 } else {
-                    OutlinedButton(
+                    FilledIconButton(
                         onClick = {
                             vm.send(input)
                             input = ""
                         },
-                        enabled = input.isNotBlank()
+                        enabled = input.isNotBlank(),
+                        modifier = Modifier.size(52.dp)
                     ) {
                         Icon(Icons.AutoMirrored.Filled.Send, null)
                     }
@@ -304,19 +317,25 @@ private fun MessageBubble(
 private fun Bubble(text: String, isUser: Boolean, streaming: Boolean) {
     Card(
         shape = RoundedCornerShape(
-            topStart = 12.dp, topEnd = 12.dp,
-            bottomStart = if (isUser) 12.dp else 2.dp,
-            bottomEnd = if (isUser) 2.dp else 12.dp
+            topStart = 20.dp, topEnd = 20.dp,
+            bottomStart = if (isUser) 20.dp else 6.dp,
+            bottomEnd = if (isUser) 6.dp else 20.dp
         ),
         colors = androidx.compose.material3.CardDefaults.cardColors(
-            containerColor = if (isUser) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.surfaceVariant,
-            contentColor = if (isUser) MaterialTheme.colorScheme.onPrimary else MaterialTheme.colorScheme.onSurfaceVariant
-        )
+            containerColor = if (isUser) MaterialTheme.colorScheme.primary
+            else MaterialTheme.colorScheme.surfaceContainerHigh,
+            contentColor = if (isUser) MaterialTheme.colorScheme.onPrimary
+            else MaterialTheme.colorScheme.onSurface
+        ),
+        border = if (isUser) null else androidx.compose.foundation.BorderStroke(
+            1.dp, MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.5f)
+        ),
+        elevation = androidx.compose.material3.CardDefaults.cardElevation(defaultElevation = 0.dp)
     ) {
         Text(
             text + if (streaming) "▍" else "",
             style = MaterialTheme.typography.bodyLarge,
-            modifier = Modifier.padding(12.dp)
+            modifier = Modifier.padding(horizontal = 14.dp, vertical = 10.dp)
         )
     }
 }

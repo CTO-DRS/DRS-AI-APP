@@ -1,0 +1,18 @@
+<lint-module
+    format="1"
+    dir="/home/z/my-project/DRS-AI-APP-src/app"
+    name=":app"
+    type="APP"
+    maven="DRS AI:app:unspecified"
+    agpVersion="8.5.2"
+    buildFolder="build"
+    bootClassPath="/tmp/my-project/android-sdk/platforms/android-34/android.jar:/tmp/my-project/android-sdk/build-tools/34.0.0/core-lambda-stubs.jar"
+    javaSourceLevel="17"
+    compileTarget="android-34">
+  <lintOptions
+      abortOnError="true"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="release"/>
+</lint-module>

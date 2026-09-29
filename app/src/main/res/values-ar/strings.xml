@@ -8,6 +8,8 @@
     <string name="nav_models">النماذج</string>
     <string name="nav_tools">الأدوات</string>
     <string name="nav_settings">الإعدادات</string>
+    <string name="nav_vision">الرؤية</string>
+    <string name="nav_voice">الصوت</string>
 
     <!-- Status badges -->
     <string name="badge_local">محلي</string>

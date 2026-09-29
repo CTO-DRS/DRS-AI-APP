@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.drs.ai.app-mergeReleaseResources-54:/values-v30/values-v30.xml",
+            "map": [
+                {
+                    "source": "/home/z/.gradle/caches/8.9/transforms/f543412d6403f6645a942be2231baa70/transformed/material3-release/res/values-v30/values-v30.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "72",
+                        "endOffsets": "123"
+                    }
+                }
+            ]
+        }
+    ]
+}
