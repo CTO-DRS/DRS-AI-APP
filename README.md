@@ -28,12 +28,28 @@ honestly: **"Model Required"** — and guides you to import one.
 
 1. Download `DRS-AI-v1.1.0-arm64-release.apk` from [Releases](../../releases) (14 MB, signed, R8-minified)
 2. Install on Android 8.0+ (ARM64) — allow "unknown sources" if asked
-3. Open the app → **Model Center** → import a GGUF model
-   - Recommended: `Qwen2.5-1.5B-Instruct-Q4_K_M` or `Llama-3.2-1B-Instruct-Q4_K_M`
-4. Chat, ask questions about your documents, analyze images, transcribe voice — all offline
+3. Download a ready model **from the same release page** — no external site needed | نزّل نموذجاً جاهزاً من صفحة الإصدار نفسها:
 
-> ⚠️ **Honest design**: the APK ships **without** bundled models (models are 1–4 GB). The app shows
+   | Model | Size | Best for | الأفضل لـ |
+   |---|---|---|---|
+   | [Qwen2.5-1.5B-Instruct-Q4_K_M.gguf](../../releases/download/v1.1.0/Qwen2.5-1.5B-Instruct-Q4_K_M.gguf) ⭐ | 1066 MB | Best overall — strong **Arabic** + English, math & reasoning | جودة عالية ودعم عربي ممتاز |
+   | [Llama-3.2-1B-Instruct-Q4_K_M.gguf](../../releases/download/v1.1.0/Llama-3.2-1B-Instruct-Q4_K_M.gguf) | 770 MB | Lighter on RAM, English-focused | أخف على الذاكرة |
+
+4. Open the app → **Model Center** → import the GGUF file | افتح التطبيق ← مركز النماذج ← استورد ملف GGUF
+5. Chat, ask questions about your documents, analyze images, transcribe voice — all offline
+
+> ⚠️ **Honest design**: the APK ships **without** bundled models (models are ~1 GB each). The app shows
 > clear "Model Required" states until you import one. This is a feature, not a bug.
+> التصميم الصادق: التطبيق يأتي بلا نماذج مدمجة، ويعرض حالة «مطلوب نموذج» بوضوح حتى تستورد واحداً.
+
+## 🧠 Models | النماذج
+
+- **Qwen2.5-1.5B-Instruct (Q4_K_M)** — official Qwen quantization. Recommended default; best multilingual
+  quality including Arabic, 16K context, ~1.1 GB RAM at inference.
+- **Llama-3.2-1B-Instruct (Q4_K_M)** — Meta's compact instruct model; lower RAM footprint, great English.
+- Any other GGUF (`Q4_K_M`/`Q5_K_M`/`Q6_K`, ≤ 4B recommended for phones) can be imported via SAF.
+- SHA-256 checksums for the hosted models are listed in the release notes — verify after download.
+- نماذج GGUF أخرى متوافقة يمكن استيرادها مباشرة من وحدة تخزين الجهاز عبر SAF.
 
 ## 🏗 Architecture | البنية
 
