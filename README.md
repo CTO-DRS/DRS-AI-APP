@@ -26,7 +26,7 @@ honestly: **"Model Required"** — and guides you to import one.
 
 ## 📦 Install | التثبيت
 
-1. Download `DRS-AI-v1.2.0-arm64-release.apk` from [Releases](../../releases/tag/v1.2.0) (14 MB, signed, R8-minified)
+1. Download `DRS-AI-v1.2.1-arm64-release.apk` from [Releases](../../releases/tag/v1.2.1) (14 MB, signed, R8-minified)
 2. Install on Android 8.0+ (ARM64) — allow "unknown sources" if asked
 3. Download a ready model **from the release pages** — no external site needed | نزّل نموذجاً جاهزاً من صفحات الإصدارات:
 
@@ -43,6 +43,17 @@ honestly: **"Model Required"** — and guides you to import one.
 > ⚠️ **Honest design**: the APK ships **without** bundled models (models are 0.4–1.1 GB each). The app shows
 > clear "Model Required" states until you import one. This is a feature, not a bug.
 > التصميم الصادق: التطبيق يأتي بلا نماذج مدمجة، ويعرض حالة «مطلوب نموذج» بوضوح حتى تستورد واحداً.
+
+## 🎨 What's new in v1.2.1 | جديد الإصدار
+
+- **Full-surface UI overhaul completed** — every remaining screen rebuilt with the modern shell:
+  Model Center (tinted model cards + honest import flow), Documents (search + doc cards), Settings
+  (sectioned cards with pill sliders + switch rows), Vision (requirement banners + full-bleed image),
+  Voice, Tools (scrollable chip tabs), Diagnostics, About, Privacy, and a redesigned Lock screen
+- New shared component kit: `GradientBanner`, `SectionCard`, `IconBadge`, `SliderRow`, `SwitchRow`,
+  `EmptyState`, `PrimaryAction`, `SoftAction`, `ChipRow`, and soft entrance animations
+- Same signature key, same honest engine — drop-in upgrade over v1.2.0
+- إكمال تحديث كل الشاشات المتبقية بهوية Nova Indigo مع مكونات مشتركة جديدة وحركات دخول ناعمة
 
 ## 🎨 What's new in v1.2.0 | جديد الإصدار
 
@@ -70,6 +81,8 @@ honestly: **"Model Required"** — and guides you to import one.
 - **v1.1.0 highlight**: **incremental KV-cache** — conversation history is encoded once; new turns
   reuse the cached prefix (`llama_memory_seq_rm`) instead of re-encoding the full history every turn
 - **v1.2.0 highlight**: full **"Nova Indigo" UI redesign** + new robot icon — same honest engine underneath
+- **v1.2.1 highlight**: **every screen modernized** — shared component kit, sectioned settings, tinted
+  model cards, soft entrance animations (23/23 JVM tests green)
 - **App**: Kotlin + Jetpack Compose (M3), Room, DataStore, SAF import, single-module clean layering
 - **Honest diagnostics**: the app reports CPU-only inference truthfully (Vulkan backend detected but
   not used in this release — see roadmap)
