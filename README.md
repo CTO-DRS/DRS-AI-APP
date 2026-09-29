@@ -26,21 +26,33 @@ honestly: **"Model Required"** — and guides you to import one.
 
 ## 📦 Install | التثبيت
 
-1. Download `DRS-AI-v1.1.0-arm64-release.apk` from [Releases](../../releases) (14 MB, signed, R8-minified)
+1. Download `DRS-AI-v1.2.0-arm64-release.apk` from [Releases](../../releases/tag/v1.2.0) (14 MB, signed, R8-minified)
 2. Install on Android 8.0+ (ARM64) — allow "unknown sources" if asked
-3. Download a ready model **from the same release page** — no external site needed | نزّل نموذجاً جاهزاً من صفحة الإصدار نفسها:
+3. Download a ready model **from the release pages** — no external site needed | نزّل نموذجاً جاهزاً من صفحات الإصدارات:
 
    | Model | Size | Best for | الأفضل لـ |
    |---|---|---|---|
    | [Qwen2.5-1.5B-Instruct-Q4_K_M.gguf](../../releases/download/v1.1.0/Qwen2.5-1.5B-Instruct-Q4_K_M.gguf) ⭐ | 1066 MB | Best overall — strong **Arabic** + English, math & reasoning | جودة عالية ودعم عربي ممتاز |
    | [Llama-3.2-1B-Instruct-Q4_K_M.gguf](../../releases/download/v1.1.0/Llama-3.2-1B-Instruct-Q4_K_M.gguf) | 770 MB | Lighter on RAM, English-focused | أخف على الذاكرة |
+   | [Qwen2.5-0.5B-Instruct-Q4_K_M.gguf](../../releases/download/v1.2.0/Qwen2.5-0.5B-Instruct-Q4_K_M.gguf) | 469 MB | Entry-level phones (2–3 GB RAM) | للأجهزة الضعيفة — سريع جداً |
+   | [SmolVLM2-500M Q8_0 + mmproj](../../releases/tag/v1.2.0) | 417 + 104 MB | **Vision** — import both files (model + projector) | الرؤية — استورد الملفين معاً |
 
 4. Open the app → **Model Center** → import the GGUF file | افتح التطبيق ← مركز النماذج ← استورد ملف GGUF
 5. Chat, ask questions about your documents, analyze images, transcribe voice — all offline
 
-> ⚠️ **Honest design**: the APK ships **without** bundled models (models are ~1 GB each). The app shows
+> ⚠️ **Honest design**: the APK ships **without** bundled models (models are 0.4–1.1 GB each). The app shows
 > clear "Model Required" states until you import one. This is a feature, not a bug.
 > التصميم الصادق: التطبيق يأتي بلا نماذج مدمجة، ويعرض حالة «مطلوب نموذج» بوضوح حتى تستورد واحداً.
+
+## 🎨 What's new in v1.2.0 | جديد الإصدار
+
+- **"Nova Indigo" redesign** — indigo→violet→cyan brand gradient, refined dark mode, softer shapes,
+  tactile press animations across every screen
+- **New smart-robot app icon** (adaptive + legacy, all densities)
+- **Dashboard**: gradient hero card, pulsing generation status, tinted quick-action grid
+- **Chat**: modern rounded bubbles + pill input bar with circular send/stop buttons
+- **SmolVLM2 vision bundle** hosted on the release for one-page setup
+- إعادة تصميم شاملة بهوية عصرية، أيقونة روبوت ذكي، ودعم رؤية جاهز للتنزيل من صفحة الإصدار
 
 ## 🧠 Models | النماذج
 
@@ -57,6 +69,7 @@ honestly: **"Model Required"** — and guides you to import one.
 - **Native libs (10)**: `libllama`, `libggml`, `libggml-cpu`, `libggml-base`, `libmtmd`, `libdrs_core`, `libdrs_vision`, `libdrs_whisper_jni`, …
 - **v1.1.0 highlight**: **incremental KV-cache** — conversation history is encoded once; new turns
   reuse the cached prefix (`llama_memory_seq_rm`) instead of re-encoding the full history every turn
+- **v1.2.0 highlight**: full **"Nova Indigo" UI redesign** + new robot icon — same honest engine underneath
 - **App**: Kotlin + Jetpack Compose (M3), Room, DataStore, SAF import, single-module clean layering
 - **Honest diagnostics**: the app reports CPU-only inference truthfully (Vulkan backend detected but
   not used in this release — see roadmap)
