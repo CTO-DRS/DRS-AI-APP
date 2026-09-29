@@ -2,3 +2,7 @@ dist/
 *.log
 .DS_Store
 local.properties
+build/
+.gradle/
+*.apk
+*.aab
