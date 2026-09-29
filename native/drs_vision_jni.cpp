@@ -1,4 +1,5 @@
 // DRS AI — JNI bridge for llama.cpp mtmd multimodal (libdrs_vision_jni.so)
+#include "ggml-backend.h"
 #include "llama.h"
 #include "ggml.h"
 #include "mtmd.h"
@@ -77,6 +78,19 @@ private:
 } // namespace
 
 extern "C" {
+
+// Registers dynamic backends (CPU/Vulkan) from the APK lib dir + llama init.
+// Self-contained: vision does not depend on libdrs_core_jni.so.
+JNIEXPORT jstring JNICALL
+Java_com_drs_ai_core_vision_VisionNative_nativeInitBackends(JNIEnv* env, jobject, jstring backendDir) {
+    static std::once_flag init_once;
+    std::string dir = to_string(env, backendDir);
+    std::call_once(init_once, [&dir] {
+        ggml_backend_load_all_from_path(dir.c_str());
+        llama_backend_init();
+    });
+    return nullptr;
+}
 
 JNIEXPORT jlong JNICALL
 Java_com_drs_ai_core_vision_VisionNative_nativeVisionCreate(JNIEnv*, jobject) {

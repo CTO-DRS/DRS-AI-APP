@@ -3,11 +3,15 @@ package com.drs.ai
 import android.app.Application
 import com.drs.ai.core.diagnostics.DiagnosticsCollector
 import com.drs.ai.core.inference.EngineManager
+import com.drs.ai.core.inference.LlamaNative
 import com.drs.ai.core.memory.MemoryManager
 import com.drs.ai.core.models.ModelRepository
 import com.drs.ai.core.rag.RagPipeline
+import com.drs.ai.core.reminders.ReminderNotifications
 import com.drs.ai.core.vision.VisionEngine
+import com.drs.ai.core.vision.VisionNative
 import com.drs.ai.core.voice.VoiceEngine
+import com.drs.ai.core.voice.WhisperNative
 import com.drs.ai.data.db.DrsDatabase
 import com.drs.ai.data.settings.SettingsRepository
 import com.tom_roush.pdfbox.android.PDFBoxResourceLoader
@@ -24,6 +28,7 @@ class AppContainer(app: Application) {
     val vision = VisionEngine(app, engines.chat)
     val voice = VoiceEngine(app)
     val diagnostics = DiagnosticsCollector(app, engines.chat, engines.embedder)
+    val reminders = com.drs.ai.core.reminders.ReminderScheduler(app, db.reminderDao())
 }
 
 object AppGraph {
@@ -41,5 +46,14 @@ class DrsApp : Application() {
         super.onCreate()
         PDFBoxResourceLoader.init(applicationContext)
         AppGraph.init(this)
+
+        // v1.3: register ggml backends (CPU always, Vulkan when supported) early
+        // so both chat inference and diagnostics see the real backend registry.
+        LlamaNative.initBackends(this)
+        VisionNative.initBackends(this)
+        WhisperNative.initBackends(this)
+
+        // v1.3: smart reminders
+        ReminderNotifications.createChannel(this)
     }
 }

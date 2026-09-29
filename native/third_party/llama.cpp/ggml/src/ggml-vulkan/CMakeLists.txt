@@ -49,6 +49,12 @@ if (Vulkan_FOUND)
                              ../../include/ggml-vulkan.h
                             )
 
+    # DRS AI: the generated shaders TU is a huge SPIR-V data blob; cap optimization
+    # so low-RAM build hosts (<=4GB) can compile it without OOM. No runtime impact
+    # (the file only embeds precompiled SPIR-V byte arrays).
+    set_source_files_properties(${CMAKE_CURRENT_BINARY_DIR}/ggml-vulkan-shaders.cpp
+                                PROPERTIES COMPILE_OPTIONS "-O1;-g0")
+
     set(VULKAN_SHADER_GEN_CMAKE_ARGS "")
 
     # Test all shader extensions

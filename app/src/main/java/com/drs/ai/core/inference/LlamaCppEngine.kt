@@ -16,7 +16,9 @@ import kotlinx.coroutines.withContext
  * llama.cpp-backed implementation of [LlmEngine]. Single-mutex serialization keeps the
  * native context safe; generation runs on Dispatchers.IO.
  */
-class LlamaCppEngine : LlmEngine {
+class LlamaCppEngine(
+    private val appContext: android.content.Context? = null
+) : LlmEngine {
 
     private val _state = MutableStateFlow<EngineState>(EngineState.Idle)
     override val state: StateFlow<EngineState> = _state
@@ -32,7 +34,8 @@ class LlamaCppEngine : LlmEngine {
     override val loadedModelName: String? get() = modelName
     override val nCtx: Int get() = loadedCtx
 
-    override suspend fun load(modelPath: String, displayName: String, nCtx: Int, nThreads: Int, nBatch: Int, embedMode: Boolean): String? =
+    override suspend fun load(modelPath: String, displayName: String, nCtx: Int, nThreads: Int, nBatch: Int,
+                              embedMode: Boolean, gpuLayers: Int): String? =
         mutex.withLock {
             withContext(Dispatchers.IO) {
                 if (!LlamaNative.available) return@withContext "Native library libdrs_core_jni.so is unavailable on this device"
@@ -46,7 +49,10 @@ class LlamaCppEngine : LlmEngine {
                     val msg = "Engine init failed (null handle)"
                     _state.value = EngineState.Error(msg); return@withContext msg
                 }
-                val err = LlamaNative.nativeLoad(h, modelPath, nCtx, nThreads, nBatch, embedMode)
+                val backendDir = LlamaNative.backendDir.ifEmpty {
+                    appContext?.applicationInfo?.nativeLibraryDir ?: ""
+                }
+                val err = LlamaNative.nativeLoad(h, modelPath, nCtx, nThreads, nBatch, embedMode, gpuLayers, backendDir)
                 if (err != null) {
                     LlamaNative.nativeDestroy(h)
                     handle = 0L

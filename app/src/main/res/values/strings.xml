@@ -341,4 +341,59 @@
     <string name="file_size_kb">%1$.0f KB</string>
     <string name="ram_gb">%1$.1f GB</string>
     <string name="cores_fmt">%1$d</string>
+    <!-- v1.3: smart reminders -->
+    <string name="nav_reminders">Reminders</string>
+    <string name="reminders_subtitle">Local alarms — private, offline, no accounts</string>
+    <string name="reminders_channel_name">Reminders</string>
+    <string name="reminders_channel_desc">Fires your local reminders at the right time</string>
+    <string name="reminders_active_n">%1$d active reminder(s)</string>
+    <string name="reminders_none_active">No active reminders</string>
+    <string name="reminders_next">Next: %1$s — %2$s</string>
+    <string name="reminders_next_none">Nothing scheduled yet</string>
+    <string name="reminders_inexact_hint">Exact alarms are restricted by Android. Reminders may fire within a few minutes of the set time.</string>
+    <string name="reminders_smart_title">Smart assist (on-device)</string>
+    <string name="reminders_smart_hint">Describe what you want to be reminded of, and the local model turns it into concrete reminders.</string>
+    <string name="reminders_smart_placeholder">e.g. remind me to submit the report tomorrow at 9</string>
+    <string name="reminders_need_model">Load a chat model first to use smart assist.</string>
+    <string name="reminders_ai_failed">Could not parse suggestions. Try rephrasing.</string>
+    <string name="reminders_add">Add</string>
+    <string name="reminders_templates">Quick templates</string>
+    <string name="tpl_morning">Morning brief</string>
+    <string name="tpl_hydration">Hydration</string>
+    <string name="tpl_medication">Medication</string>
+    <string name="tpl_focus">Focus break</string>
+    <string name="tpl_sleep">Early sleep</string>
+    <string name="reminders_yours">Your reminders</string>
+    <string name="reminders_empty_title">No reminders yet</string>
+    <string name="reminders_empty_hint">Create your first reminder, or let the local model suggest some.</string>
+    <string name="reminders_add_first">Add a reminder</string>
+    <string name="reminders_add_title">New reminder</string>
+    <string name="reminders_field_title">Title</string>
+    <string name="reminders_field_note">Note (optional)</string>
+    <string name="reminders_repeat">Repeat</string>
+    <string name="repeat_once">Once</string>
+    <string name="repeat_daily">Daily</string>
+    <string name="repeat_weekly">Weekly</string>
+    <string name="repeat_custom">Custom</string>
+    <string name="reminders_custom_every">Repeats every %1$d h</string>
+    <string name="reminders_pick_time">Pick time</string>
+
+    <!-- v1.3: Vulkan GPU -->
+    <string name="gpu_section_title">GPU acceleration (Vulkan)</string>
+    <string name="gpu_toggle_label">Offload model to GPU</string>
+    <string name="gpu_toggle_caption">Uses the device GPU via Vulkan for faster generation. Applies to the next model load.</string>
+    <string name="gpu_devices_detected">Detected device: %1$s</string>
+    <string name="gpu_devices_none">No compatible Vulkan GPU found — CPU inference stays available</string>
+    <string name="gpu_probe_failed">Could not probe Vulkan devices</string>
+    <string name="gpu_needs_reload">Reload the active model for this change to take effect.</string>
+
+    <!-- v1.3: improved export -->
+    <string name="export_menu_title">Export chat</string>
+    <string name="export_fmt_markdown">Markdown</string>
+    <string name="export_fmt_html">HTML</string>
+    <string name="export_fmt_pdf">PDF</string>
+    <string name="export_fmt_json">JSON</string>
+    <string name="export_fmt_txt">Plain text</string>
+    <string name="export_share_toast">Exported — choose where to save or share</string>
+
 </resources>

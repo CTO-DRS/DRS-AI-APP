@@ -3,6 +3,7 @@
 
 #include "llama.h"
 #include "ggml.h"
+#include "ggml-backend.h"
 
 #include <algorithm>
 #include <chrono>
@@ -33,6 +34,17 @@ static void log_callback(enum ggml_log_level level, const char* text, void* /*us
     }
 }
 
+void init_backends(const std::string& dir) {
+    static std::once_flag backend_once;
+    std::call_once(backend_once, [&dir] {
+        // Dynamic backend loading (GGML_BACKEND_DL=ON): registers CPU and,
+        // when the device supports Vulkan 1.1+, the Vulkan GPU backend.
+        // Failure to load a backend is non-fatal — the CPU path remains.
+        ggml_backend_load_all_from_path(dir.c_str());
+        llama_backend_init();
+    });
+}
+
 Engine::Engine() : impl_(new Impl) {
     llama_log_set(log_callback, nullptr);
 }
@@ -52,13 +64,12 @@ std::string Engine::load(const std::string& model_path, const GenParams& params)
     std::lock_guard<std::mutex> lock(impl_->mtx);
     unload_locked();
 
-    static std::once_flag backend_once;
-    std::call_once(backend_once, [] { llama_backend_init(); });
+    init_backends(params.backend_dir.empty() ? "." : params.backend_dir);
 
     llama_model_params mp = llama_model_default_params();
     mp.use_mmap  = params.use_mmap;
     mp.use_mlock = false;
-    mp.n_gpu_layers = 0; // v1: CPU inference, reported honestly everywhere
+    mp.n_gpu_layers = params.n_gpu_layers > 0 ? params.n_gpu_layers : 0; // 0 = CPU; v1.3: Vulkan GPU offload
 
     impl_->model = llama_model_load_from_file(model_path.c_str(), mp);
     if (!impl_->model) {

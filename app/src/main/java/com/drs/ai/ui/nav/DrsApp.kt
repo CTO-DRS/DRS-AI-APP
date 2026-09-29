@@ -56,6 +56,7 @@ object Routes {
     const val DOCUMENTS = "documents"
     const val VISION = "vision"
     const val VOICE = "voice"
+    const val REMINDERS = "reminders"
     const val PRIVACY = "privacy"
     const val DIAGNOSTICS = "diagnostics"
     const val ABOUT = "about"
@@ -145,6 +146,7 @@ fun DrsRoot() {
                 composable(Routes.DOCUMENTS) { DocumentsScreen(nav) }
                 composable(Routes.VISION) { VisionScreen(nav) }
                 composable(Routes.VOICE) { VoiceScreen(nav) }
+                composable(Routes.REMINDERS) { com.drs.ai.features.reminders.RemindersScreen(nav) }
                 composable(Routes.PRIVACY) { PrivacyScreen(nav) }
                 composable(Routes.DIAGNOSTICS) { DiagnosticsScreen(nav) }
                 composable(Routes.ABOUT) { AboutScreen(nav) }

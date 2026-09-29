@@ -46,6 +46,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.drs.ai.AppGraph
+import com.drs.ai.core.inference.LlamaNative
 import com.drs.ai.R
 import com.drs.ai.ui.components.SectionCard
 import com.drs.ai.ui.components.SliderRow
@@ -68,6 +69,7 @@ fun SettingsScreen(nav: NavController) {
     var ctx by remember { mutableIntStateOf(2048) }
     var batch by remember { mutableIntStateOf(256) }
     var ramPct by remember { mutableIntStateOf(60) }
+    var gpuLayers by remember { mutableIntStateOf(0) }
 
     LaunchedEffect(s?.threads) {
         val cur = s ?: return@LaunchedEffect
@@ -75,6 +77,7 @@ fun SettingsScreen(nav: NavController) {
         ctx = cur.contextSize
         batch = cur.batchSize
         ramPct = cur.maxRamPct
+        gpuLayers = cur.gpuLayers
     }
 
     Column(
@@ -161,8 +164,28 @@ fun SettingsScreen(nav: NavController) {
                     onChange = { v -> scope.launch { container.settings.setFlashAttention(v) } }
                 )
             }
+
+            // v1.3: Vulkan GPU offload
+            val gpuOn = gpuLayers > 0
+            val gpuDevices = remember { LlamaNative.gpuDevices() }
+            SwitchRow(
+                label = stringResource(R.string.gpu_toggle_label),
+                checked = gpuOn,
+                onChange = { v -> gpuLayers = if (v) 999 else 0; scope.launch { container.settings.setGpuLayers(gpuLayers) } },
+                caption = stringResource(R.string.gpu_toggle_caption)
+            )
             Text(
-                stringResource(R.string.settings_gpu_layers_note),
+                text = when {
+                    gpuDevices == null -> stringResource(R.string.gpu_probe_failed)
+                    gpuDevices!!.isNotEmpty() -> stringResource(R.string.gpu_devices_detected, gpuDevices!!)
+                    else -> stringResource(R.string.gpu_devices_none)
+                },
+                style = MaterialTheme.typography.labelMedium,
+                color = if (gpuDevices?.isNotEmpty() == true) MaterialTheme.colorScheme.primary
+                        else MaterialTheme.colorScheme.onSurfaceVariant
+            )
+            Text(
+                stringResource(R.string.gpu_needs_reload),
                 style = MaterialTheme.typography.labelMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )

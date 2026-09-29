@@ -164,7 +164,8 @@ class ChatViewModel(
                     val profile = HardwareProfiler.probe(appContext)
                     val threads = settings.threads.takeIf { it > 0 } ?: profile.recThreads
                     val ctx = settings.contextSize.coerceAtMost(active.ctxLen?.toInt() ?: settings.contextSize)
-                    val err = engine.load(active.path, active.name, ctx, threads, settings.batchSize)
+                    val err = engine.load(active.path, active.name, ctx, threads, settings.batchSize,
+                                          gpuLayers = settings.gpuLayers)
                     if (err != null) {
                         _error.value = "load_failed: $err"
                         return

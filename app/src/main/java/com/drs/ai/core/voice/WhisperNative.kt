@@ -17,6 +17,20 @@ object WhisperNative {
         }
     }
 
+    @Volatile private var backendsReady = false
+
+    /** Register CPU backend registry from the APK lib dir (whisper runs on CPU). Idempotent. */
+    fun initBackends(context: android.content.Context): Boolean {
+        if (backendsReady) return true
+        return try {
+            nativeInitBackends(context.applicationInfo.nativeLibraryDir)
+            backendsReady = true
+            true
+        } catch (t: Throwable) { false }
+    }
+
+    external fun nativeInitBackends(backendDir: String): String?
+
     external fun nativeWhisperCreate(): Long
     external fun nativeWhisperDestroy(handle: Long)
     external fun nativeWhisperLoad(handle: Long, modelPath: String, threads: Int): String?

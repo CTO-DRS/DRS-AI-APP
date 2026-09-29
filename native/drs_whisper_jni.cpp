@@ -1,6 +1,7 @@
 // DRS AI — JNI bridge for whisper.cpp v1.7.4 (libdrs_whisper_jni.so)
 // whisper + its own ggml are statically linked into this library with hidden
 // visibility so their symbols never interpose with libllama's ggml at runtime.
+#include "ggml-backend.h"
 #include "whisper.h"
 
 #include <jni.h>
@@ -47,6 +48,18 @@ jstring to_jstring(JNIEnv* env, const std::string& s) {
 } // namespace
 
 extern "C" {
+
+// Registers dynamic backends from the APK lib dir (whisper itself runs on CPU).
+// Self-contained: voice does not depend on libdrs_core_jni.so.
+JNIEXPORT jstring JNICALL
+Java_com_drs_ai_core_voice_WhisperNative_nativeInitBackends(JNIEnv* env, jobject, jstring backendDir) {
+    static std::once_flag init_once;
+    std::string dir = to_string(env, backendDir);
+    std::call_once(init_once, [&dir] {
+        ggml_backend_load_all_from_path(dir.c_str()); // CPU registry; whisper does its own backend init
+    });
+    return nullptr;
+}
 
 JNIEXPORT jlong JNICALL
 Java_com_drs_ai_core_voice_WhisperNative_nativeWhisperCreate(JNIEnv*, jobject) {

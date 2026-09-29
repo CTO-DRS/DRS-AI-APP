@@ -1,12 +1,17 @@
 // DRS AI — JNI bridge for drs::Engine (libdrs_core_jni.so)
 #include "drs_core.h"
 
+#include "llama.h"
+#include "ggml.h"
+#include "ggml-backend.h"
+
 #include <jni.h>
 #include <android/log.h>
 #include <cstring>
 #include <map>
 #include <memory>
 #include <mutex>
+#include <string_view>
 
 #define LOGE(...) __android_log_print(ANDROID_LOG_ERROR, "drs-jni", __VA_ARGS__)
 
@@ -83,8 +88,40 @@ Java_com_drs_ai_core_inference_LlamaNative_nativeDestroy(JNIEnv*, jobject, jlong
 }
 
 JNIEXPORT jstring JNICALL
+Java_com_drs_ai_core_inference_LlamaNative_nativeInitBackends(JNIEnv* env, jobject, jstring backendDir) {
+    drs::init_backends(to_string(env, backendDir));
+    return nullptr;
+}
+
+JNIEXPORT jstring JNICALL
+Java_com_drs_ai_core_inference_LlamaNative_nativeGpuDevices(JNIEnv* env, jobject) {
+    // Honest GPU discovery: enumerate registered backends + devices.
+    // Returns "" when no GPU backend is available (CPU-only).
+    std::string out;
+    size_t nreg = ggml_backend_reg_count();
+    for (size_t i = 0; i < nreg; ++i) {
+        ggml_backend_reg_t reg = ggml_backend_reg_get(i);
+        if (!reg) continue;
+        const char* rname = ggml_backend_reg_name(reg);
+        if (!rname || std::string_view(rname) == "CPU") continue;
+        size_t ndev = ggml_backend_reg_dev_count(reg);
+        for (size_t d = 0; d < ndev; ++d) {
+            ggml_backend_dev_t dev = ggml_backend_reg_dev_get(reg, d);
+            if (!dev) continue;
+            if (!out.empty()) out += "; ";
+            const char* dn = ggml_backend_dev_name(dev);
+            const char* dd = ggml_backend_dev_description(dev);
+            out += (dn ? dn : "GPU");
+            if (dd && *dd) { out += " ("; out += dd; out += ")"; }
+        }
+    }
+    return to_jstring(env, out);
+}
+
+JNIEXPORT jstring JNICALL
 Java_com_drs_ai_core_inference_LlamaNative_nativeLoad(JNIEnv* env, jobject, jlong handle,
-        jstring modelPath, jint nCtx, jint nThreads, jint nBatch, jboolean embedMode) {
+        jstring modelPath, jint nCtx, jint nThreads, jint nBatch, jboolean embedMode,
+        jint nGpuLayers, jstring backendDir) {
     auto* e = find_engine(handle);
     if (!e) return to_jstring(env, "invalid engine handle");
     drs::GenParams gp;
@@ -93,6 +130,8 @@ Java_com_drs_ai_core_inference_LlamaNative_nativeLoad(JNIEnv* env, jobject, jlon
     gp.n_batch    = nBatch;
     gp.n_ubatch   = nBatch;
     gp.embed_mode = embedMode == JNI_TRUE;
+    gp.n_gpu_layers = nGpuLayers;
+    gp.backend_dir  = to_string(env, backendDir);
     std::string err = e->load(to_string(env, modelPath), gp);
     return err.empty() ? nullptr : to_jstring(env, err);
 }

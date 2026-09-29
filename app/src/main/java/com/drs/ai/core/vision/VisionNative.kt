@@ -16,6 +16,20 @@ object VisionNative {
         }
     }
 
+    @Volatile private var backendsReady = false
+
+    /** Register CPU (and GPU when supported) backends from the APK lib dir. Idempotent. */
+    fun initBackends(context: android.content.Context): Boolean {
+        if (backendsReady) return true
+        return try {
+            nativeInitBackends(context.applicationInfo.nativeLibraryDir)
+            backendsReady = true
+            true
+        } catch (t: Throwable) { false }
+    }
+
+    external fun nativeInitBackends(backendDir: String): String?
+
     interface Sink {
         fun onToken(piece: String): Boolean
     }

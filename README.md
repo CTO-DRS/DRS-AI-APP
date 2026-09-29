@@ -22,11 +22,12 @@ honestly: **"Model Required"** — and guides you to import one.
 | 🧰 **7 Tools** | Calculator, unit/temperature converter, datetime, device info, regex, Base64, SHA-256 |
 | 🔒 **Privacy** | App lock (PBKDF2-150k), everything stays on device, zero telemetry |
 | 🌐 **Bilingual** | Full Arabic/English UI with proper RTL |
-| 📤 **Export** | Conversations to JSON / Markdown / TXT / PDF |
+| 📤 **Export** | Conversations to Markdown / **HTML** / PDF / JSON / TXT + share |  
+| ⏰ **Smart Reminders** | Local alarms, repeats, quick templates, on-device AI suggestions |
 
 ## 📦 Install | التثبيت
 
-1. Download `DRS-AI-v1.2.1-arm64-release.apk` from [Releases](../../releases/tag/v1.2.1) (14 MB, signed, R8-minified)
+1. Download `DRS-AI-v1.3.0-arm64-release.apk` from [Releases](../../releases/tag/v1.3.0) (43 MB, signed, R8-minified, **Vulkan GPU** inside)
 2. Install on Android 8.0+ (ARM64) — allow "unknown sources" if asked
 3. Download a ready model **from the release pages** — no external site needed | نزّل نموذجاً جاهزاً من صفحات الإصدارات:
 
@@ -35,6 +36,7 @@ honestly: **"Model Required"** — and guides you to import one.
    | [Qwen2.5-1.5B-Instruct-Q4_K_M.gguf](../../releases/download/v1.1.0/Qwen2.5-1.5B-Instruct-Q4_K_M.gguf) ⭐ | 1066 MB | Best overall — strong **Arabic** + English, math & reasoning | جودة عالية ودعم عربي ممتاز |
    | [Llama-3.2-1B-Instruct-Q4_K_M.gguf](../../releases/download/v1.1.0/Llama-3.2-1B-Instruct-Q4_K_M.gguf) | 770 MB | Lighter on RAM, English-focused | أخف على الذاكرة |
    | [Qwen2.5-0.5B-Instruct-Q4_K_M.gguf](../../releases/download/v1.2.0/Qwen2.5-0.5B-Instruct-Q4_K_M.gguf) | 469 MB | Entry-level phones (2–3 GB RAM) | للأجهزة الضعيفة — سريع جداً |
+   | [Qwen_Qwen3-1.7B-Q4_K_M.gguf](../../releases/download/v1.3.0/Qwen_Qwen3-1.7B-Q4_K_M.gguf) 🧠 | 1282 MB | **Newest generation (Qwen3)** — thinking mode, strong reasoning | أحدث جيل — استدلال قوي |
    | [SmolVLM2-500M Q8_0 + mmproj](../../releases/tag/v1.2.0) | 417 + 104 MB | **Vision** — import both files (model + projector) | الرؤية — استورد الملفين معاً |
 
 4. Open the app → **Model Center** → import the GGUF file | افتح التطبيق ← مركز النماذج ← استورد ملف GGUF
@@ -43,6 +45,23 @@ honestly: **"Model Required"** — and guides you to import one.
 > ⚠️ **Honest design**: the APK ships **without** bundled models (models are 0.4–1.1 GB each). The app shows
 > clear "Model Required" states until you import one. This is a feature, not a bug.
 > التصميم الصادق: التطبيق يأتي بلا نماذج مدمجة، ويعرض حالة «مطلوب نموذج» بوضوح حتى تستورد واحداً.
+
+## 🔥 What's new in v1.3.0 | جديد الإصدار
+
+- **⚡ Vulkan GPU acceleration** — real `libggml-vulkan.so` (b6000) with precompiled SPIR-V shaders,
+  cooperative-matrix + integer dot-product support. One toggle in Settings offloads the model to the
+  GPU; if the device lacks Vulkan 1.1+ the app **falls back to CPU automatically** (honest, no crashes).
+- **🛠 Critical fix**: `libc++_shared.so` was **missing from every earlier release** (v1.1.0–v1.2.1),
+  which meant the native engine never loaded on-device. v1.3.0 ships it — inference actually works now.
+- **⏰ Smart Reminders** — brand-new screen: local AlarmManager (no network, no accounts), repeat
+  modes (once/daily/weekly/custom), quick templates (hydration, medication, focus…), boot-safe
+  re-scheduling, and **on-device AI suggestions** that turn a wish like "remind me to submit the report
+  tomorrow at 9" into concrete reminders (requires a loaded model).
+- **📤 Improved export** — new styled **HTML** format (RTL-aware, printable to PDF), **Arabic-correct
+  PDF** via StaticLayout (proper letter shaping — the old PDF broke Arabic), timestamps and message
+  counts everywhere, and one-tap share/save via the system sheet.
+- **🧠 New model**: Qwen3-1.7B (Q4_K_M) — the newest Qwen generation with thinking mode.
+- إصلاح حرج + تسريع Vulkan + شاشة تذكيرات ذكية + تصدير محسّن يدعم العربية — كل ذلك في إصدار واحد.
 
 ## 🎨 What's new in v1.2.1 | جديد الإصدار
 

@@ -23,7 +23,13 @@ struct GenParams {
     bool     embed_mode     = false; // pooling=MEAN + embeddings on
     bool     use_mmap       = true;
     bool     flash_attn     = false;
+    int      n_gpu_layers   = 0;     // 0 = CPU only; >0 offloads N layers (Vulkan)
+    std::string backend_dir;         // directory holding libggml-*.so (dlopen registry)
 };
+
+// Load dynamic backends (CPU, Vulkan...) from dir + llama_backend_init().
+// Safe to call from any module; the work happens exactly once per process.
+void init_backends(const std::string& dir);
 
 struct RunParams {
     int      max_tokens     = 512;

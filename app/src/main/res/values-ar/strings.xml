@@ -341,4 +341,59 @@
     <string name="file_size_kb">%1$.0f KB</string>
     <string name="ram_gb">%1$.1f GB</string>
     <string name="cores_fmt">%1$d</string>
+    <!-- v1.3: smart reminders -->
+    <string name="nav_reminders">التذكيرات</string>
+    <string name="reminders_subtitle">تنبيهات محلية — خاصة وبدون إنترنت وبدون حسابات</string>
+    <string name="reminders_channel_name">التذكيرات</string>
+    <string name="reminders_channel_desc">يطلق تذكيراتك المحلية في وقتها</string>
+    <string name="reminders_active_n">%1$d تذكير نشط</string>
+    <string name="reminders_none_active">لا توجد تذكيرات نشطة</string>
+    <string name="reminders_next">التالي: %1$s — %2$s</string>
+    <string name="reminders_next_none">لا شيء مجدول بعد</string>
+    <string name="reminders_inexact_hint">قيّد أندرويد المنبّهات الدقيقة. قد يطلق التذكير خلال دقائق من وقته المحدد.</string>
+    <string name="reminders_smart_title">المساعدة الذكية (على الجهاز)</string>
+    <string name="reminders_smart_hint">اكتب ما تريد أن تُذكَّر به، ويحوّله النموذج المحلي إلى تذكيرات محددة.</string>
+    <string name="reminders_smart_placeholder">مثال: ذكّرني بتسليم التقرير غداً الساعة 9</string>
+    <string name="reminders_need_model">حمّل نموذج محادثة أولاً لاستخدام المساعدة الذكية.</string>
+    <string name="reminders_ai_failed">تعذّر فهم الاقتراحات. جرّب صياغة أخرى.</string>
+    <string name="reminders_add">إضافة</string>
+    <string name="reminders_templates">قوالب سريعة</string>
+    <string name="tpl_morning">موجز الصباح</string>
+    <string name="tpl_hydration">شرب الماء</string>
+    <string name="tpl_medication">الدواء</string>
+    <string name="tpl_focus">استراحة تركيز</string>
+    <string name="tpl_sleep">نوم مبكر</string>
+    <string name="reminders_yours">تذكيراتك</string>
+    <string name="reminders_empty_title">لا توجد تذكيرات</string>
+    <string name="reminders_empty_hint">أنشئ أول تذكير، أو دع النموذج المحلي يقترح عليك.</string>
+    <string name="reminders_add_first">إضافة تذكير</string>
+    <string name="reminders_add_title">تذكير جديد</string>
+    <string name="reminders_field_title">العنوان</string>
+    <string name="reminders_field_note">ملاحظة (اختياري)</string>
+    <string name="reminders_repeat">التكرار</string>
+    <string name="repeat_once">مرة واحدة</string>
+    <string name="repeat_daily">يومياً</string>
+    <string name="repeat_weekly">أسبوعياً</string>
+    <string name="repeat_custom">مخصص</string>
+    <string name="reminders_custom_every">يتكرر كل %1$d ساعة</string>
+    <string name="reminders_pick_time">اختر الوقت</string>
+
+    <!-- v1.3: Vulkan GPU -->
+    <string name="gpu_section_title">تسريع GPU (Vulkan)</string>
+    <string name="gpu_toggle_label">نقل النموذج إلى معالج الرسوميات</string>
+    <string name="gpu_toggle_caption">يستخدم GPU الجهاز عبر Vulkan لتوليد أسرع بكثير. يسري عند تحميل النموذج التالي.</string>
+    <string name="gpu_devices_detected">الجهاز المكتشف: %1$s</string>
+    <string name="gpu_devices_none">لا يوجد GPU متوافق مع Vulkan — يعمل الاستدلال على المعالج المركزي</string>
+    <string name="gpu_probe_failed">تعذّر فحص أجهزة Vulkan</string>
+    <string name="gpu_needs_reload">أعد تحميل النموذج النشط لتفعيل التغيير.</string>
+
+    <!-- v1.3: improved export -->
+    <string name="export_menu_title">تصدير المحادثة</string>
+    <string name="export_fmt_markdown">Markdown</string>
+    <string name="export_fmt_html">HTML</string>
+    <string name="export_fmt_pdf">PDF</string>
+    <string name="export_fmt_json">JSON</string>
+    <string name="export_fmt_txt">نص عادي</string>
+    <string name="export_share_toast">تم التصدير — اختر مكان الحفظ أو المشاركة</string>
+
 </resources>

@@ -23,6 +23,12 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.Send
+import androidx.compose.material.icons.filled.FileDownload
+import androidx.compose.material3.DropdownMenu
+import androidx.compose.material3.DropdownMenuItem
+import androidx.compose.material3.HorizontalDivider
+import android.widget.Toast
+import com.drs.ai.domain.ChatExporter
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.History
 import androidx.compose.material.icons.filled.Stop
@@ -83,8 +89,28 @@ fun ChatScreen(nav: NavController, vm: ChatViewModel = viewModel(factory = ChatV
     var input by remember { mutableStateOf("") }
     var showSessions by remember { mutableStateOf(false) }
     var showParams by remember { mutableStateOf(false) }
+    var showExport by remember { mutableStateOf(false) }
+    var exportToast by remember { mutableStateOf(false) }
+
+    fun doExport(fmt: ChatExporter.Format) {
+        val msgs = messages
+        val sess = session ?: return
+        if (msgs.isEmpty()) return
+        try {
+            val file = ChatExporter.export(context, sess, msgs, fmt)
+            ChatExporter.share(context, file)
+        } catch (t: Throwable) {
+            Toast.makeText(context, t.message ?: "export failed", Toast.LENGTH_SHORT).show()
+        }
+    }
 
     val listState = rememberLazyListState()
+    LaunchedEffect(exportToast) {
+        if (exportToast) {
+            Toast.makeText(context, context.getString(R.string.export_share_toast), Toast.LENGTH_SHORT).show()
+            exportToast = false
+        }
+    }
     LaunchedEffect(messages.size, streamText) {
         if (messages.isNotEmpty() || streamText.isNotEmpty()) {
             listState.animateScrollToItem((messages.size + if (streamText.isNotEmpty()) 1 else 0).coerceAtLeast(0))
@@ -115,6 +141,59 @@ fun ChatScreen(nav: NavController, vm: ChatViewModel = viewModel(factory = ChatV
                     IconButton(onClick = { showSessions = true }) { Icon(Icons.Filled.History, null) }
                     IconButton(onClick = { vm.newSession() }) { Icon(Icons.Filled.Add, null) }
                     IconButton(onClick = { showParams = true }) { Icon(Icons.Filled.Tune, null) }
+                    // v1.3: improved export
+                    IconButton(onClick = { showExport = true }) {
+                        Icon(Icons.AutoMirrored.Filled.Send, null)
+                    }
+                    DropdownMenu(expanded = showExport, onDismissRequest = { showExport = false }) {
+                        Text(
+                            stringResource(R.string.export_menu_title),
+                            style = MaterialTheme.typography.labelMedium,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp)
+                        )
+                        HorizontalDivider()
+                        DropdownMenuItem(
+                            text = { Text(stringResource(R.string.export_fmt_markdown)) },
+                            onClick = {
+                                showExport = false
+                                doExport(ChatExporter.Format.Markdown)
+                                exportToast = true
+                            }
+                        )
+                        DropdownMenuItem(
+                            text = { Text(stringResource(R.string.export_fmt_html)) },
+                            onClick = {
+                                showExport = false
+                                doExport(ChatExporter.Format.Html)
+                                exportToast = true
+                            }
+                        )
+                        DropdownMenuItem(
+                            text = { Text(stringResource(R.string.export_fmt_pdf)) },
+                            onClick = {
+                                showExport = false
+                                doExport(ChatExporter.Format.Pdf)
+                                exportToast = true
+                            }
+                        )
+                        DropdownMenuItem(
+                            text = { Text(stringResource(R.string.export_fmt_json)) },
+                            onClick = {
+                                showExport = false
+                                doExport(ChatExporter.Format.Json)
+                                exportToast = true
+                            }
+                        )
+                        DropdownMenuItem(
+                            text = { Text(stringResource(R.string.export_fmt_txt)) },
+                            onClick = {
+                                showExport = false
+                                doExport(ChatExporter.Format.Txt)
+                                exportToast = true
+                            }
+                        )
+                    }
                 }
             )
         }

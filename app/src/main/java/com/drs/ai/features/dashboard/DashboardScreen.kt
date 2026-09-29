@@ -23,11 +23,13 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.Chat
 import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
 import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.Alarm
+import androidx.compose.material.icons.filled.MonitorHeart
+import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.Bolt
 import androidx.compose.material.icons.filled.Description
 import androidx.compose.material.icons.filled.Image
 import androidx.compose.material.icons.filled.Mic
-import androidx.compose.material.icons.filled.MonitorHeart
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
@@ -211,6 +213,14 @@ fun DashboardScreen(nav: NavController) {
             }
             QuickAction(Modifier.weight(1f), stringResource(R.string.nav_voice), Icons.Filled.Mic) {
                 nav.navigate(Routes.VOICE)
+            }
+        }
+        Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+            QuickAction(Modifier.weight(1f), stringResource(R.string.nav_reminders), Icons.Filled.Alarm) {
+                nav.navigate(Routes.REMINDERS)
+            }
+            QuickAction(Modifier.weight(1f), stringResource(R.string.nav_settings), Icons.Filled.Settings) {
+                nav.navigate(Routes.SETTINGS)
             }
         }
         Spacer(Modifier.height(48.dp))

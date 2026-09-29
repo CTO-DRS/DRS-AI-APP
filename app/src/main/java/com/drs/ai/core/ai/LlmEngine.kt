@@ -10,7 +10,8 @@ interface LlmEngine {
     val nCtx: Int
 
     /** Load a model. Returns null on success or an error message. */
-    suspend fun load(modelPath: String, displayName: String, nCtx: Int, nThreads: Int, nBatch: Int, embedMode: Boolean = false): String?
+    suspend fun load(modelPath: String, displayName: String, nCtx: Int, nThreads: Int, nBatch: Int,
+                     embedMode: Boolean = false, gpuLayers: Int = 0): String?
 
     suspend fun unload()
 

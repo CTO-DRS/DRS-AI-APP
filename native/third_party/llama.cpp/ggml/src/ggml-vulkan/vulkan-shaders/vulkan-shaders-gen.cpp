@@ -702,15 +702,21 @@ void write_output_files() {
             continue;
         }
 
-        fprintf(hdr, "extern unsigned char %s_data[%zu];\n", name.c_str(), size);
+        // DRS AI (low-RAM hosts): emit the SPIR-V bytes as an octal-escaped string
+        // literal instead of a comma-separated byte array. Clang tokenizes one
+        // literal cheaply, while millions of array initializer elements can OOM
+        // build hosts with <= 4GB RAM. Octal escapes are exactly 3 digits each,
+        // so adjacent escapes never merge (unlike \x). Trailing implicit NUL is
+        // accounted for by declaring/defining the array with size + 1.
+        fprintf(hdr, "extern unsigned char %s_data[%zu];\n", name.c_str(), size + 1);
         fprintf(hdr, "const uint64_t %s_len = %zu;\n\n", name.c_str(), size);
 
-        fprintf(src, "unsigned char %s_data[%zu] = {\n", name.c_str(), size);
+        fprintf(src, "unsigned char %s_data[%zu] =\n\"", name.c_str(), size + 1);
         for (size_t i = 0; i < size; ++i) {
-            fprintf(src, "0x%02x,", data[i]);
-            if ((i + 1) % 12 == 0) fprintf(src, "\n");
+            fprintf(src, "\\%03o", (unsigned) data[i]);
+            if ((i + 1) % 200 == 0) fprintf(src, "\"\n\"");
         }
-        fprintf(src, "\n};\n\n");
+        fprintf(src, "\";\n\n");
 
         if (!no_clean) {
             std::remove(path.c_str());
